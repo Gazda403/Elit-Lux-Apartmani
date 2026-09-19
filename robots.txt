@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block crawling of node_modules
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://www.elitlux.ba/sitemap.xml

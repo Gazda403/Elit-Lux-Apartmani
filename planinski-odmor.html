@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="bs" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+  <title>Planinski Odmor – Pale & Jahorina | Lokacije, Priroda i Zdravlje | Elit Lux</title>
+  <meta name="description" content="Otkrijte zašto je planinski odmor na Palama i Jahorini savršen za tijelo i duh. Pećine, ski staze, Sarajevo, svježi vazduh i netaknuta priroda — sve na dohvat ruke." />
+  <meta name="keywords" content="planinski odmor Pale, Jahorina priroda, atrakcije Pale, Sarajevo izlet, Pećina Orlovača, zdravlje planine, odmor Bosna" />
+  <meta name="author" content="Elit Lux Apartmani Pale" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://www.elitlux.ba/planinski-odmor.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Planinski Odmor – Pale & Jahorina | Lokacije i Zdravlje" />
+  <meta property="og:description" content="Svježi zrak, tišina planine i historija Sarajeva — sve na dohvat ruke iz vaših Elit Lux apartmana." />
+  <meta property="og:url" content="https://www.elitlux.ba/planinski-odmor.html" />
+  <meta property="og:image" content="https://www.elitlux.ba/images/Living_room_interior_design_20260918111930.jpeg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-light: #F6F4EE;
+      --bg-dark: #0E0E10;
+      --bg-card-dark: #141416;
+      --text-dark: #111111;
+      --text-muted: #6B6B6B;
+      --text-light: #F0EEE8;
+      --accent-gold: #C9A84C;
+      --accent-espresso: #2B1D0E;
+      --border-light: rgba(0,0,0,0.10);
+      --border-dark: rgba(255,255,255,0.08);
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Syne', sans-serif;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; transition: color 0.25s ease, opacity 0.25s ease; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    .container {
+      width: 100%;
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media (max-width: 768px) { .container { padding: 0 20px; } }
+    @media (max-width: 480px) { .container { padding: 0 16px; } }
+
+    /* =========================================================================
+       NAVIGATION
+       ========================================================================= */
+    .nav-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 72px;
+      background: rgba(246, 244, 238, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    @media (max-width: 992px) { .nav-bar { padding: 0 20px; height: 64px; } }
+    @media (max-width: 480px) { .nav-bar { padding: 0 16px; height: 60px; } }
+
+    .nav-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.02rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--text-dark);
+    }
+
+    @media (max-width: 480px) {
+      .nav-brand { font-size: 0.88rem; letter-spacing: 0.08em; }
+    }
+
+    .nav-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    .nav-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--text-dark); }
+
+    /* Mobile Return Button */
+    .mobile-back-btn {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--text-dark);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+    .mobile-back-btn svg {
+      transition: transform 0.2s ease;
+    }
+    .mobile-back-btn:hover, .mobile-back-btn:active {
+      background: var(--accent-gold);
+      color: #000;
+    }
+    .mobile-back-btn:hover svg {
+      transform: translateX(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .mobile-back-btn { display: inline-flex; }
+    }
+
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .pill-btn-dark {
+      background: var(--text-dark);
+      color: var(--bg-light);
+    }
+    .pill-btn-dark:hover { background: var(--accent-gold); color: #000; }
+
+    .pill-btn-outline {
+      background: transparent;
+      color: var(--text-dark);
+      border: 1.5px solid var(--text-dark);
+    }
+    .pill-btn-outline:hover { background: var(--text-dark); color: #fff; }
+
+    /* =========================================================================
+       HERO
+       ========================================================================= */
+    .hero {
+      min-height: 65vh;
+      padding-top: 72px;
+      display: flex;
+      align-items: center;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .hero { min-height: auto; padding-top: 64px; }
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      opacity: 0.32;
+    }
+
+    .hero-bg-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 70px 0 60px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner { padding: 40px 0 36px; }
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6.5vw, 4.8rem);
+      font-weight: 800;
+      line-height: 1.08;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-headline em {
+      font-style: normal;
+      color: var(--accent-gold);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 1.6vw, 1.12rem);
+      color: rgba(240,238,232,0.78);
+      max-width: 620px;
+      line-height: 1.65;
+      margin-bottom: 30px;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 15px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: rgba(240,238,232,0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-badge-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+    }
+
+    /* =========================================================================
+       BENEFITS (MOUNTAIN HEALTH)
+       ========================================================================= */
+    .benefits-section {
+      padding: 90px 0;
+      background: var(--bg-light);
+    }
+
+    @media (max-width: 768px) { .benefits-section { padding: 50px 0 60px; } }
+
+    .section-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.65;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .section-lead { margin-bottom: 32px; font-size: 0.94rem; }
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    @media (max-width: 992px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
+    @media (max-width: 640px) { .benefits-grid { grid-template-columns: 1fr; gap: 16px; } }
+
+    .benefit-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 30px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+      .benefit-card { padding: 22px 18px; border-radius: 14px; gap: 12px; }
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.07);
+    }
+
+    .benefit-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(201, 168, 76, 0.12);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .benefit-title {
+      font-family: var(--font-display);
+      font-size: 1.04rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.25;
+    }
+
+    .benefit-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .benefit-stat {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .stat-val {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .stat-unit {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* =========================================================================
+       ATTRACTIONS — IN TOWN & NEARBY
+       ========================================================================= */
+    .attractions-section {
+      padding: 90px 0;
+      background: #fff;
+    }
+
+    @media (max-width: 768px) { .attractions-section { padding: 50px 0 60px; } }
+
+    .attraction-zone-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .attraction-zone-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+    }
+
+    .attractions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 768px) {
+      .attractions-grid { grid-template-columns: 1fr; gap: 14px; margin-bottom: 36px; }
+    }
+
+    .attraction-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 22px 22px;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      background: var(--bg-light);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    @media (max-width: 480px) {
+      .attraction-card { padding: 16px 16px; border-radius: 12px; gap: 10px; }
+    }
+
+    .attraction-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+    }
+
+    .attraction-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .attraction-dist-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--accent-espresso);
+      color: #fff;
+    }
+
+    .attraction-dist-pill.gold-pill {
+      background: var(--accent-gold);
+      color: #000;
+    }
+
+    .attraction-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .attraction-rating .rating-count {
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-left: 2px;
+    }
+
+    .attraction-info {
+      width: 100%;
+    }
+
+    .attraction-name {
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3;
+      color: var(--text-dark);
+    }
+
+    @media (max-width: 480px) {
+      .attraction-name { font-size: 0.94rem; }
+    }
+
+    .attraction-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* =========================================================================
+       SARAJEVO DAY TRIPS
+       ========================================================================= */
+    .sarajevo-section {
+      padding: 90px 0;
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    @media (max-width: 768px) { .sarajevo-section { padding: 50px 0 60px; } }
+
+    .sarajevo-section .section-eyebrow { color: var(--accent-gold); }
+    .sarajevo-section .section-headline { color: #fff; }
+    .sarajevo-section .section-lead { color: rgba(240,238,232,0.7); }
+
+    .sarajevo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    @media (max-width: 1100px) { .sarajevo-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .sarajevo-grid { grid-template-columns: 1fr; gap: 11px; } }
+
+    .sarajevo-card {
+      padding: 20px 18px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+      .sarajevo-card { padding: 16px 16px; border-radius: 10px; }
+    }
+
+    .sarajevo-card:hover {
+      border-color: var(--accent-gold);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .sarajevo-card-dist {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .sarajevo-card-name {
+      font-family: var(--font-display);
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .sarajevo-card-type {
+      font-size: 0.77rem;
+      color: rgba(240,238,232,0.55);
+    }
+
+    /* =========================================================================
+       CTA STRIP
+       ========================================================================= */
+    .cta-strip {
+      padding: 80px 0;
+      background: var(--bg-light);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) { .cta-strip { padding: 50px 0; } }
+
+    .cta-strip-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .cta-strip-sub {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .cta-strip-btns {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 480px) {
+      .cta-strip-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+      .cta-strip-btns .pill-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+    }
+
+    /* =========================================================================
+       FOOTER
+       ========================================================================= */
+    .site-footer {
+      background: #0B0B0C;
+      color: #88867e;
+      padding: 40px 0 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.84rem;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-flex { flex-direction: column; text-align: center; gap: 14px; }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a:hover { color: var(--accent-gold); }
+
+    /* =========================================================================
+       SCROLL FADE IN
+       ========================================================================= */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s var(--ease-out-expo);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav-bar">
+    <a href="bs.html" class="nav-brand" title="Povratak na početnu">
+      <span class="nav-dot"></span>
+      ELIT LUX PALE
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-links">
+      <a href="bs.html" class="nav-link">Početna</a>
+      <a href="smjestaj-pale.html" class="nav-link">Smještaj Pale</a>
+      <a href="smjestaj-jahorina.html" class="nav-link">Jahorina</a>
+      <a href="bs.html#inquiry" class="pill-btn pill-btn-dark">Rezervacija ↗</a>
+    </nav>
+
+    <!-- Mobile Return to Home Button -->
+    <a href="bs.html" class="mobile-back-btn" aria-label="Povratak na početnu stranicu">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Početna</span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-bg-img">
+        <img src="images/469227281_18362366470136080_6516623537460839772_n.jpg" alt="Planinski pejzaž Pale i Jahorine" />
+      </div>
+      <div class="container">
+        <div class="hero-inner">
+          <span class="hero-eyebrow">Pale · Jahorina · 43.8170° N, 18.5700° E</span>
+          <h1 class="hero-headline">
+            Planinski<br /><em>Odmor</em>
+          </h1>
+          <p class="hero-subtitle">
+            Okruženi ste planinama, čistim vazduhom i kulturom koja seže vjekovima unazad. Sve što trebate za pravi odmor — na dohvat ruke iz vaših apartmana.
+          </p>
+          <div class="hero-badge-row">
+            <span class="hero-badge"><span class="hero-badge-dot"></span>Jahorina — 14 km</span>
+            <span class="hero-badge"><span class="hero-badge-dot"></span>Sarajevo — 16 km</span>
+            <span class="hero-badge"><span class="hero-badge-dot"></span>Stari Grad — 17 km</span>
+            <span class="hero-badge"><span class="hero-badge-dot"></span>Svjež planinski vazduh</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MOUNTAIN HEALTH BENEFITS ===== -->
+    <section class="benefits-section">
+      <div class="container">
+        <span class="section-eyebrow fade-up">Zašto planinski odmor?</span>
+        <h2 class="section-headline fade-up">Planina liječi —<br />tijelo i duh.</h2>
+        <p class="section-lead fade-up">
+          Naučno je dokazano: boravak u planinskom okruženju smanjuje kortizol, jača imunitet i poboljšava kvalitet sna. Pale i Jahorina nude idealne uvjete za duboki, pravi odmor.
+        </p>
+
+        <div class="benefits-grid">
+
+          <!-- Card 1: Air -->
+          <div class="benefit-card fade-up">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7A7.1 7.1 0 1 1 5 10.8"/><path d="M8 15h12"/><path d="M4 18h14"/><path d="M7 12h10"/></svg>
+            </div>
+            <div class="benefit-title">Čist planinski vazduh</div>
+            <div class="benefit-text">
+              Na nadmorskoj visini od 700–1800 m, vazduh je bogat negativnim ionima i slobodan od urbanih zagađivača. Svaki udisaj aktivno čisti pluća i smanjuje upalne procese u organizmu.
+            </div>
+            <div class="benefit-stat">
+              <span class="stat-val">−42%</span>
+              <span class="stat-unit">Aerozagađenja</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Mental reset -->
+          <div class="benefit-card fade-up">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18v-9z"/></svg>
+            </div>
+            <div class="benefit-title">Mentalni mir & reset</div>
+            <div class="benefit-text">
+              Tišina planine, zeleni pejzaži i odsustvo urbane buke smanjuju anksioznost i hronični stres. Studije pokazuju da tri dana u prirodi smanjuju kortizol za 15–20%.
+            </div>
+            <div class="benefit-stat">
+              <span class="stat-val">−20%</span>
+              <span class="stat-unit">Kortizol (stres)</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Sleep -->
+          <div class="benefit-card fade-up">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4"/><path d="M21 5h-4"/></svg>
+            </div>
+            <div class="benefit-title">Bolji, dublji san</div>
+            <div class="benefit-text">
+              Temperatura noću na planini prirodno pada, što stimulira lučenje melatonina. Hladnoća i tišina pružaju idealne uvjete za regeneracijski san koji nedostaje u gradu.
+            </div>
+            <div class="benefit-stat">
+              <span class="stat-val">+1.5h</span>
+              <span class="stat-unit">Dubokog REM sna</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Immunity -->
+          <div class="benefit-card fade-up">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="benefit-title">Jači imunitet</div>
+            <div class="benefit-text">
+              Boravak u borištu i planinskim šumama povećava aktivnost NK ćelija (prirodnih ubica) koje brane organizam od virusa i infekcija. Efekat traje sedmicama nakon povratka.
+            </div>
+            <div class="benefit-stat">
+              <span class="stat-val">+40%</span>
+              <span class="stat-unit">Aktivnost NK ćelija</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Activity -->
+          <div class="benefit-card fade-up">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 19 6-6 4 4 6-6"/><path d="M17 7h4v4"/></svg>
+            </div>
+            <div class="benefit-title">Aktivnost bez napora</div>
+            <div class="benefit-text">
+              Planinska šetnja od samo 60 minuta sagorijeva 400–600 kalorija, jača srce i krvne sudove. Staze na Jahorini i okolini Pala nude trasu za svačiji tempo — od šetača do alpiniste.
+            </div>
+            <div class="benefit-stat">
+              <span class="stat-val">600 kcal</span>
+              <span class="stat-unit">Po satu šetnje</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Vitamin D -->
+          <div class="benefit-card fade-up">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </div>
+            <div class="benefit-title">Vitamin D & sunce</div>
+            <div class="benefit-text">
+              Na planini sunčevo UV-B zračenje je intenzivnije, što ubrzava sintezu vitamina D u koži. Vitamin D direktno utiče na raspoloženje, imunitet i zdravlje kostiju.
+            </div>
+            <div class="benefit-stat">
+              <span class="stat-val">3× više</span>
+              <span class="stat-unit">Prirodnog UV-B</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IN-TOWN ATTRACTIONS ===== -->
+    <section class="attractions-section">
+      <div class="container">
+        <span class="section-eyebrow fade-up">Lokacije</span>
+        <h2 class="section-headline fade-up">Direktno u gradu<br />& okolini Pala</h2>
+        <p class="section-lead fade-up">
+          Od sakralnih objekata u srcu grada do pećina i ski staza — sve se nalazi nadohvat ruke iz vaših apartmana.
+        </p>
+
+        <!-- IN TOWN (0 km) -->
+        <div class="attraction-zone-title fade-up">Centar Pala — pješačka udaljenost</div>
+        <div class="attractions-grid">
+
+          <div class="attraction-card fade-up">
+            <div class="attraction-card-top">
+              <span class="attraction-dist-pill gold-pill">0m · Centar</span>
+              <div class="attraction-rating">★ 4.9 <span class="rating-count">(76 recenzija)</span></div>
+            </div>
+            <div class="attraction-info">
+              <div class="attraction-name">Crkva Uspenja Presvete Bogorodice</div>
+              <div class="attraction-desc">Pravoslavna crkva u samom srcu Pala, Nikole Tesle 2. Mirno, historijsko mjesto sa bogatim interijerom.</div>
+            </div>
+          </div>
+
+          <div class="attraction-card fade-up">
+            <div class="attraction-card-top">
+              <span class="attraction-dist-pill gold-pill">&lt; 1 km · Grad</span>
+              <div class="attraction-rating">★ 4.8 <span class="rating-count">(185 recenzija)</span></div>
+            </div>
+            <div class="attraction-info">
+              <div class="attraction-name">Cekovića Kuća</div>
+              <div class="attraction-desc">Historijsko mjesto, RH99+P78, Romanijska. Jedno od najbolje ocijenjenih kulturnih mjesta u regiji.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- NEARBY (2-15 km) -->
+        <div class="attraction-zone-title fade-up">U blizini — kratak izlet (2–15 km)</div>
+        <div class="attractions-grid">
+
+          <div class="attraction-card fade-up">
+            <div class="attraction-card-top">
+              <span class="attraction-dist-pill">2–3 km · 7 min</span>
+              <div class="attraction-rating">★ 4.6 <span class="rating-count">(843 recenzije)</span></div>
+            </div>
+            <div class="attraction-info">
+              <div class="attraction-name">Vrelo Paljanske Miljacke</div>
+              <div class="attraction-desc">Restoran s izvorom rijeke Miljacke na Gornjim Palama. Prirodni kutak idealan za ručak u zelenilu.</div>
+            </div>
+          </div>
+
+          <div class="attraction-card fade-up">
+            <div class="attraction-card-top">
+              <span class="attraction-dist-pill">2–4 km · 6 min</span>
+              <div class="attraction-rating">★ 4.6 <span class="rating-count">(2.900 recenzija)</span></div>
+            </div>
+            <div class="attraction-info">
+              <div class="attraction-name">Ski Centar Ravna Planina</div>
+              <div class="attraction-desc">Popularno ski odredište odmah kraj Pala, idealno za početnike i porodice. Jahorinski potok bb.</div>
+            </div>
+          </div>
+
+          <div class="attraction-card fade-up">
+            <div class="attraction-card-top">
+              <span class="attraction-dist-pill">10–12 km · 15 min</span>
+              <div class="attraction-rating">★ 4.7 <span class="rating-count">(280 recenzija)</span></div>
+            </div>
+            <div class="attraction-info">
+              <div class="attraction-name">Pećina Orlovača</div>
+              <div class="attraction-desc">Impresivna stalagmitska pećina u Sumbulovcu. Konstanta temperatura 8°C — osvježenje u svakom godišnjem dobu.</div>
+            </div>
+          </div>
+
+          <div class="attraction-card fade-up">
+            <div class="attraction-card-top">
+              <span class="attraction-dist-pill">13–14 km · 18 min</span>
+              <div class="attraction-rating">★ 4.6 <span class="rating-count">(2.300 recenzija)</span></div>
+            </div>
+            <div class="attraction-info">
+              <div class="attraction-name">Jahorina Planina</div>
+              <div class="attraction-desc">Vrh i ski centar svjetske klase na 1916 m. Domaćin ZOI '84, 20+ ski staza, netaknuta priroda.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SARAJEVO DAY TRIPS ===== -->
+    <section class="sarajevo-section">
+      <div class="container">
+        <span class="section-eyebrow fade-up">Sarajevo — 16–18 km · ~25 min vožnje</span>
+        <h2 class="section-headline fade-up">Historija na<br />dohvat ruke.</h2>
+        <p class="section-lead fade-up">
+          Jedno od najzanimljivijih evropskih gradova nalazi se manje od pola sata vožnje. Idealan jednodnevni izlet iz vaših planinskih apartmana.
+        </p>
+
+        <div class="sarajevo-grid">
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">16 km · ~22 min</div>
+            <div class="sarajevo-card-name">Yellow Fortress</div>
+            <div class="sarajevo-card-type">Historijska tvrđava · Panoramski pogled</div>
+          </div>
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">16 km · ~22 min</div>
+            <div class="sarajevo-card-name">Sebilj Česma</div>
+            <div class="sarajevo-card-type">Historijska fontana · Baščaršija</div>
+          </div>
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">16 km · ~22 min</div>
+            <div class="sarajevo-card-name">Morica Han</div>
+            <div class="sarajevo-card-type">Osmanski karavansaraj · Stari grad</div>
+          </div>
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">17 km · ~25 min</div>
+            <div class="sarajevo-card-name">Stari Sat (Sahat Kula)</div>
+            <div class="sarajevo-card-type">Historijska kula · Simbol Sarajeva</div>
+          </div>
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">17 km · ~25 min</div>
+            <div class="sarajevo-card-name">Svrzo's House</div>
+            <div class="sarajevo-card-type">Muzej · Osmanska arhitektura</div>
+          </div>
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">17 km · ~25 min</div>
+            <div class="sarajevo-card-name">Latinska Ćuprija</div>
+            <div class="sarajevo-card-type">Most · Mjesto atentata 1914.</div>
+          </div>
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">17 km · ~25 min</div>
+            <div class="sarajevo-card-name">Trg Oslobođenja</div>
+            <div class="sarajevo-card-type">Centralni trg · Alija Izetbegović</div>
+          </div>
+
+          <div class="sarajevo-card fade-up">
+            <div class="sarajevo-card-dist">18 km · ~26 min</div>
+            <div class="sarajevo-card-name">Veliki Park</div>
+            <div class="sarajevo-card-type">Gradski park · Šetnja i odmor</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA STRIP ===== -->
+    <section class="cta-strip">
+      <div class="container">
+        <h2 class="cta-strip-headline fade-up">Rezervišite vaš odmor.</h2>
+        <p class="cta-strip-sub fade-up">
+          Odaberite jedan od naša četiri luksuzna apartmana u centru Pala — i iskoristite sve što ova regija nudi.
+        </p>
+        <div class="cta-strip-btns fade-up">
+          <a href="bs.html#inquiry" class="pill-btn pill-btn-dark">Rezervišite odmah ↗</a>
+          <a href="bs.html#urbanShowcase" class="pill-btn pill-btn-outline">Pogledajte apartmane</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-flex">
+        <div>
+          <strong style="color:#fff; font-family: var(--font-display); letter-spacing:0.1em;">ELIT LUX</strong>
+          <span style="margin-left:8px;">— Apartmani Pale & Jahorina</span>
+        </div>
+        <div class="footer-links">
+          <a href="bs.html">Početna</a>
+          <a href="smjestaj-pale.html">Smještaj Pale</a>
+          <a href="smjestaj-jahorina.html">Jahorina</a>
+          <a href="bs.html#inquiry">Rezervacija</a>
+        </div>
+        <div>© 2025 Elit Lux Apartmani. Sva prava zadržana.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Intersection Observer for fade-up animations
+      const fadeEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add('visible'), i * 50);
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08 });
+
+        fadeEls.forEach(el => obs.observe(el));
+      } else {
+        fadeEls.forEach(el => el.classList.add('visible'));
+      }
+    });
+  </script>
+</body>
+</html>

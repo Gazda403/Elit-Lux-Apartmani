@@ -1,0 +1,12 @@
+{
+  "name": "lux-apartmani",
+  "version": "1.0.0",
+  "description": "Lux Apartmani — Planinski Penthausi & Rezidencije",
+  "scripts": {
+    "dev": "serve . -l 3000",
+    "start": "serve . -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
