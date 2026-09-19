@@ -21,7 +21,9 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg" />
 
-  <!-- Fonts -->
+  <!-- Fonts & CDN Preconnect -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -729,7 +731,7 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="hero-bg-img">
-        <img src="images/469227281_18362366470136080_6516623537460839772_n.jpg" alt="Planinski pejzaž Pale i Jahorine" />
+        <img src="images/469227281_18362366470136080_6516623537460839772_n.jpg" alt="Planinski pejzaž Pale i Jahorine" loading="lazy" decoding="async" />
       </div>
       <div class="container">
         <div class="hero-inner">
@@ -1042,8 +1044,75 @@
     </div>
   </footer>
 
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // ---- GSAP Staggered Section Animations ----
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Benefit cards stagger in
+        const benefitCards = document.querySelectorAll('.benefit-card');
+        if (benefitCards.length) {
+          gsap.fromTo(benefitCards,
+            { y: 50, opacity: 0, scale: 0.95 },
+            {
+              y: 0, opacity: 1, scale: 1,
+              duration: 0.7, stagger: 0.1, ease: 'power3.out',
+              scrollTrigger: { trigger: '.benefits-grid', start: 'top 82%', once: true }
+            }
+          );
+        }
+
+        // Attraction cards slide up
+        const attractionCards = document.querySelectorAll('.attraction-card');
+        if (attractionCards.length) {
+          gsap.fromTo(attractionCards,
+            { y: 40, opacity: 0 },
+            {
+              y: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: 'power3.out',
+              scrollTrigger: { trigger: '.attractions-grid', start: 'top 83%', once: true }
+            }
+          );
+        }
+
+        // Sarajevo cards pop in
+        const sarajevoCards = document.querySelectorAll('.sarajevo-card');
+        if (sarajevoCards.length) {
+          gsap.fromTo(sarajevoCards,
+            { y: 36, opacity: 0 },
+            {
+              y: 0, opacity: 1, duration: 0.55, stagger: 0.07, ease: 'power2.out',
+              scrollTrigger: { trigger: '.sarajevo-grid', start: 'top 84%', once: true }
+            }
+          );
+        }
+
+        // Headline stagger
+        gsap.utils.toArray('.section-headline').forEach(el => {
+          gsap.fromTo(el,
+            { y: 30, opacity: 0 },
+            {
+              y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
+              scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+            }
+          );
+        });
+
+        // Hero headline reveal
+        const heroH = document.querySelector('.hero-headline');
+        if (heroH) {
+          gsap.fromTo(heroH, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, ease: 'power4.out', delay: 0.15 });
+        }
+        const heroSub = document.querySelector('.hero-subtitle');
+        if (heroSub) {
+          gsap.fromTo(heroSub, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', delay: 0.35 });
+        }
+      }
+
       // Intersection Observer for fade-up animations
       const fadeEls = document.querySelectorAll('.fade-up');
       if ('IntersectionObserver' in window) {

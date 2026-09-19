@@ -134,14 +134,19 @@
 
 
   <!-- Google Fonts: Editorial Serif + Architectural Wide & Condensed Display + Clean Grotesk -->
+  
+  <!-- Performance: Resource hints -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet" />
 
   <!-- GSAP & Lenis Smooth Scroll CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js" defer></script>
 
   <style>
     /* ==========================================================================
@@ -2501,7 +2506,7 @@
          ======================================================================= -->
     <section class="philosophy-section" id="philosophy">
       <div class="editorial-split-hero">
-        <img src="images/764896226.jpg_20260917203435.jpeg" alt="Topli enterijer planinskog utočišta" />
+        <img src="images/764896226.jpg_20260917203435.jpeg" alt="Topli enterijer planinskog utočišta" loading="lazy" decoding="async" />
         <div class="editorial-split-overlay">
           <div class="editorial-headline-large">
             MI KREIRAMO<br />OSJEĆAJ<br />VAŠEG DOMA
@@ -2526,7 +2531,7 @@
             </div>
 
             <div class="oura-still-life-image">
-              <img src="images/oura_still_life.jpg" alt="Arhitektonski detalji od drveta i keramike" />
+              <img src="images/oura_still_life.jpg" alt="Arhitektonski detalji od drveta i keramike" loading="lazy" decoding="async" />
             </div>
           </div>
 
@@ -2608,32 +2613,32 @@
         <!-- Mreža od 6 odabranih portretnih fotografija (Slika 3) -->
         <div class="curated-6-grid">
           <div class="curated-photo-cell">
-            <img src="images/ddk21/1/dd17.jpg" alt="Glavna spavaća soba s udobnim ležajevima" />
+            <img src="images/ddk21/1/dd17.jpg" alt="Glavna spavaća soba s udobnim ležajevima" loading="lazy" decoding="async" />
             <div class="curated-photo-label">Glavni Suite</div>
           </div>
 
           <div class="curated-photo-cell">
-            <img src="images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg" alt="Elit Lux Apartmani Logo" />
+            <img src="images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg" alt="Elit Lux Apartmani Logo" loading="lazy" decoding="async" />
             <div class="curated-photo-label">Elit Lux Apartmani</div>
           </div>
 
           <div class="curated-photo-cell">
-            <img src="images/ddk21/1/626413572.jpg" alt="Dnevni boravak s dizajnerskim namještajem" />
+            <img src="images/ddk21/1/626413572.jpg" alt="Dnevni boravak s dizajnerskim namještajem" loading="lazy" decoding="async" />
             <div class="curated-photo-label">Dnevni Boravak</div>
           </div>
 
           <div class="curated-photo-cell">
-            <img src="images/ddk21/1/dd1111111.jpg" alt="Trpezarijski sto i moderna kuhinja" />
+            <img src="images/ddk21/1/dd1111111.jpg" alt="Trpezarijski sto i moderna kuhinja" loading="lazy" decoding="async" />
             <div class="curated-photo-label">Privatna Trpeza</div>
           </div>
 
           <div class="curated-photo-cell">
-            <img src="images/ddk21/1/dd1sp.jpg" alt="Unikatno predsoblje s velikim ogledalom" />
+            <img src="images/ddk21/1/dd1sp.jpg" alt="Unikatno predsoblje s velikim ogledalom" loading="lazy" decoding="async" />
             <div class="curated-photo-label">Unikatni Detalji</div>
           </div>
 
           <div class="curated-photo-cell">
-            <img src="images/ddk21/1/cenifadd1.jpg" alt="Kupatilo i kameni wellness ambijent" />
+            <img src="images/ddk21/1/cenifadd1.jpg" alt="Kupatilo i kameni wellness ambijent" loading="lazy" decoding="async" />
             <div class="curated-photo-label">Kameni Wellness</div>
           </div>
         </div>
@@ -2705,7 +2710,7 @@
           <!-- Kartica 1: Apartman 1 Elit Lux -->
           <article class="residence-slide-card">
             <div class="residence-card-image">
-              <img src="images/Living_room_interior_design_20260918111930.jpeg" alt="Apartman 1 Elit Lux Pale" />
+              <img src="images/Living_room_interior_design_20260918111930.jpeg" alt="Apartman 1 Elit Lux Pale" loading="lazy" decoding="async" />
               <div class="residence-card-gradient"></div>
             </div>
             <div class="residence-card-top-tags">
@@ -2726,7 +2731,7 @@
           <!-- Kartica 2: Apartman 2 Elit Lux -->
           <article class="residence-slide-card">
             <div class="residence-card-image">
-              <img src="images/ddk21/2/dd2222.jpg" alt="Apartman 2 Elit Lux Pale" />
+              <img src="images/ddk21/2/dd2222.jpg" alt="Apartman 2 Elit Lux Pale" loading="lazy" decoding="async" />
               <div class="residence-card-gradient"></div>
             </div>
             <div class="residence-card-top-tags">
@@ -2747,7 +2752,7 @@
           <!-- Kartica 3: Apartman 3 Elit Lux -->
           <article class="residence-slide-card" style="border-color: rgba(255,255,255,0.4);">
             <div class="residence-card-image">
-              <img src="images/Living_and_dining_room_layout_20260918112245.jpeg" alt="Apartman 3 Elit Lux Pale" />
+              <img src="images/Living_and_dining_room_layout_20260918112245.jpeg" alt="Apartman 3 Elit Lux Pale" loading="lazy" decoding="async" />
               <div class="residence-card-gradient"></div>
             </div>
             <div class="residence-card-top-tags">
@@ -2768,7 +2773,7 @@
           <!-- Kartica 4: Apartman 4 Elit Lux -->
           <article class="residence-slide-card" style="border-color: rgba(255,255,255,0.4);">
             <div class="residence-card-image">
-              <img src="images/Modern_living_room_interior_furn…_20260918112257.jpeg" alt="Apartman 4 Elit Lux Pale" />
+              <img src="images/Modern_living_room_interior_furn…_20260918112257.jpeg" alt="Apartman 4 Elit Lux Pale" loading="lazy" decoding="async" />
               <div class="residence-card-gradient"></div>
             </div>
             <div class="residence-card-top-tags">
@@ -2799,17 +2804,17 @@
 
           <div class="staggered-images-mosaic">
             <div class="mosaic-card">
-              <img src="images/772439273.jpg" alt="Grupno Druženje" />
+              <img src="images/772439273.jpg" alt="Grupno Druženje" loading="lazy" decoding="async" />
               <span class="mosaic-tag">Grupno Druženje</span>
             </div>
 
             <div class="mosaic-card">
-              <img src="images/ddk21/1/dd1.jpg" alt="Vrhunski Komfor" />
+              <img src="images/ddk21/1/dd1.jpg" alt="Vrhunski Komfor" loading="lazy" decoding="async" />
               <span class="mosaic-tag">Vrhunski Komfor</span>
             </div>
 
             <div class="mosaic-card">
-              <img src="images/469227281_18362366470136080_6516623537460839772_n.jpg" alt="Planinska Povezanost" />
+              <img src="images/469227281_18362366470136080_6516623537460839772_n.jpg" alt="Planinska Povezanost" loading="lazy" decoding="async" />
               <span class="mosaic-tag">Planinska Povezanost</span>
             </div>
           </div>
@@ -2878,7 +2883,7 @@
                 <button type="button" class="apt-pill" data-apt="4" onclick="selectApt(this, 4)">4</button>
               </div>
               <div class="apt-preview" id="aptPreview">
-                <img src="images/Living_room_interior_design_20260918111930.jpeg" id="aptPreviewImg" alt="Apartman preview" />
+                <img src="images/Living_room_interior_design_20260918111930.jpeg" id="aptPreviewImg" alt="Apartman preview" loading="lazy" decoding="async" />
                 <span id="aptPreviewLabel">Apartman 1 Elit Lux &mdash; Dobrovoljnih davalaca krvi 21</span>
               </div>
             </div>
@@ -2919,7 +2924,7 @@
     <button class="lightbox-close-btn" id="closeLightboxBtn" aria-label="Zatvori">✕</button>
     <div class="lightbox-content">
       <div id="lightboxImgContainer" style="height: 480px;">
-        <img src="images/44982006_362457140993026_3672413912453611520_n.jpg_20260917110530.jpeg" alt="Tlocrt i enterijer penthausa" id="lightboxImg" />
+        <img src="images/44982006_362457140993026_3672413912453611520_n.jpg_20260917110530.jpeg" alt="Tlocrt i enterijer penthausa" id="lightboxImg" loading="lazy" decoding="async" />
       </div>
       <div id="lightboxDetails" style="padding: 32px 40px; background: #fff;">
         <h3 style="font-family: var(--font-display-wide); font-size: 2rem; margin-bottom: 8px;" id="lightboxTitle">Linden Rooftop</h3>
@@ -3610,6 +3615,136 @@
         }
       });
     });
+
+
+    // 10. Section reveal animations — benefits, mosaic, amenities cards
+    // Benefit / stats cards stagger in from below
+    const statCells = document.querySelectorAll('.stat-cell');
+    if (statCells.length) {
+      gsap.fromTo(statCells,
+        { y: 48, opacity: 0 },
+        {
+          y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.stats-strip', start: 'top 84%', once: true }
+        }
+      );
+    }
+
+    // Mosaic / feature cards stagger
+    const mosaicCards = document.querySelectorAll('.mosaic-card, .curated-photo-cell');
+    if (mosaicCards.length) {
+      gsap.fromTo(mosaicCards,
+        { scale: 0.92, opacity: 0 },
+        {
+          scale: 1, opacity: 1, duration: 0.65, stagger: 0.08, ease: 'power2.out',
+          scrollTrigger: { trigger: mosaicCards[0].closest('section') || mosaicCards[0], start: 'top 80%', once: true }
+        }
+      );
+    }
+
+    // Amenities list items slide in from left
+    const amenityRows = document.querySelectorAll('.amenity-row, .amenity-item, .amenity-block');
+    if (amenityRows.length) {
+      gsap.fromTo(amenityRows,
+        { x: -32, opacity: 0 },
+        {
+          x: 0, opacity: 1, duration: 0.6, stagger: 0.07, ease: 'power3.out',
+          scrollTrigger: { trigger: amenityRows[0].closest('section') || amenityRows[0], start: 'top 82%', once: true }
+        }
+      );
+    }
+
+    // Feature tags / pills pop in
+    const featurePills = document.querySelectorAll('.hero-badge, .feature-tag, .pill-highlight');
+    if (featurePills.length) {
+      gsap.fromTo(featurePills,
+        { scale: 0.78, opacity: 0 },
+        {
+          scale: 1, opacity: 1, duration: 0.5, stagger: 0.06, ease: 'back.out(1.4)',
+          scrollTrigger: { trigger: featurePills[0], start: 'top 90%', once: true }
+        }
+      );
+    }
+
+    // Staggered headline line-by-line wipe for hero (if hero title is split into two lines)
+    const heroLines = document.querySelectorAll('.hero-title-line-1, .hero-title-line-2');
+    if (heroLines.length) {
+      gsap.fromTo(heroLines,
+        { y: 60, opacity: 0, skewY: 2 },
+        {
+          y: 0, opacity: 1, skewY: 0,
+          duration: 1.0, stagger: 0.16, ease: 'power4.out',
+          delay: 0.3  // Wait for preloader to finish
+        }
+      );
+    }
+
+    // Floating card tilt up on scroll-enter (hero floating card)
+    const floatingCardEl = document.getElementById('floatingCard');
+    if (floatingCardEl) {
+      gsap.fromTo(floatingCardEl,
+        { y: 40, opacity: 0, scale: 0.94 },
+        {
+          y: 0, opacity: 1, scale: 1, duration: 1.1, ease: 'power3.out', delay: 0.55
+        }
+      );
+    }
+
+    // Gallery section title + pills stagger
+    const galleryPillTabs = document.querySelectorAll('.deco-pill-tab');
+    if (galleryPillTabs.length) {
+      gsap.fromTo(galleryPillTabs,
+        { y: 20, opacity: 0 },
+        {
+          y: 0, opacity: 1, duration: 0.5, stagger: 0.09, ease: 'power2.out',
+          scrollTrigger: { trigger: galleryPillTabs[0], start: 'top 88%', once: true }
+        }
+      );
+    }
+
+    // CTA / Inquiry form reveal — soft scale up
+    const inquirySection = document.getElementById('inquiry');
+    if (inquirySection) {
+      gsap.fromTo(inquirySection.querySelectorAll('.form-group, .pill-btn'),
+        { y: 28, opacity: 0 },
+        {
+          y: 0, opacity: 1, duration: 0.55, stagger: 0.07, ease: 'power2.out',
+          scrollTrigger: { trigger: inquirySection, start: 'top 80%', once: true }
+        }
+      );
+    }
+
+    // Subtle horizontal parallax on large decorative text labels
+    document.querySelectorAll('.section-deco-label, .section-big-text').forEach(el => {
+      gsap.to(el, {
+        x: 30,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: el.closest('section') || el,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.2
+        }
+      });
+    });
+
+    // Image scale on scroll (parallax zoom) for hero background
+    const heroBg = document.querySelector('.hero-main-image, .hero-full-bg-img');
+    if (heroBg) {
+      gsap.fromTo(heroBg,
+        { scale: 1.08 },
+        {
+          scale: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: heroBg.closest('section') || heroBg,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.8
+          }
+        }
+      );
+    }
 
     // 9. Luxury Preloader Animation (ELIT LUX APARTMANI)
     function runPreloaderAnimation() {
