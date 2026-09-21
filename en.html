@@ -1743,14 +1743,21 @@
 
     .residence-cards-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
       margin-top: 40px;
       margin-bottom: 20px;
       width: 100%;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
+      .residence-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 960px) {
       .residence-cards-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -3335,6 +3342,7 @@
             <button type="button" class="deco-pill-tab outline" data-filter="2" data-apt="2">2</button>
             <button type="button" class="deco-pill-tab outline" data-filter="3" data-apt="3">3</button>
             <button type="button" class="deco-pill-tab outline" data-filter="4" data-apt="4">4</button>
+            <button type="button" class="deco-pill-tab outline" data-filter="5" data-apt="5">5 · Konoba</button>
           </div>
           <h3 class="gallery-title">gallery.</h3>
         </div>
@@ -3571,10 +3579,31 @@
             </div>
           </article>
 
+          <!-- Card 5: Konoba Elit Lux — Gathering Venue for up to 15 people -->
+          <article class="residence-slide-card" data-location="pale" style="border-color: rgba(194,162,111,0.5);">
+            <div class="residence-card-image">
+              <img src="images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg" alt="Konoba Elit Lux — Gathering venue for up to 15 people" loading="lazy" decoding="async" />
+              <div class="residence-card-gradient"></div>
+            </div>
+            <div class="residence-card-top-tags">
+              <span class="residence-location-badge" style="background: var(--accent-gold); color: #000;">Gatherings up to 15 people</span>
+            </div>
+            <div class="residence-card-content">
+              <h3 class="residence-card-title">KONOBA ELIT LUX</h3>
+              <div class="residence-card-meta">
+                <span>Up to 15 People</span> • <span>Fireplace &amp; BBQ</span> • <span>Smart TV</span>
+              </div>
+              <div class="residence-card-price-row">
+                <div class="residence-price">By Arrangement <span>/ INQUIRY</span></div>
+                <button class="card-book-btn" onclick="bookApt(5)" aria-label="Book Konoba">Book ↗</button>
+              </div>
+            </div>
+          </article>
+
           <!-- Jahorina Coming Soon State -->
           <div id="jahorinaComingSoon" style="display:none; grid-column: 1 / -1; padding: 48px 24px; text-align: center; background: rgba(255,255,255,0.03); border: 1px dashed rgba(194,162,111,0.3); border-radius: 12px;">
             <p style="font-family: var(--font-display-wide); font-size: 1.1rem; color: #fff; margin-bottom: 8px;">Upcoming chalets on Jahorina</p>
-            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.5;">Currently, 4 premium residences are available in Pale center (12–15 minutes to Jahorina ski lifts). New ski-in/ski-out chalets on Mount Jahorina are launching next winter!</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.5;">Currently, 5 premium units are available in Pale (4 luxury apartments + Konoba gathering venue for up to 15 guests). New ski-in/ski-out chalets on Mount Jahorina are launching next winter!</p>
           </div>
         </div>
       </div>
@@ -3673,6 +3702,7 @@
                 <button type="button" class="apt-pill" data-apt="2" onclick="selectApt(this, 2)">2</button>
                 <button type="button" class="apt-pill" data-apt="3" onclick="selectApt(this, 3)">3</button>
                 <button type="button" class="apt-pill" data-apt="4" onclick="selectApt(this, 4)">4</button>
+                <button type="button" class="apt-pill" data-apt="5" onclick="selectApt(this, 5)">5 · Konoba</button>
               </div>
               <div class="apt-preview" id="aptPreview">
                 <img src="images/Living_room_interior_design_20260918111930.jpeg" id="aptPreviewImg" alt="Apartment preview" loading="lazy" decoding="async" />
@@ -4358,6 +4388,12 @@
         { img: "images/srpskihratrnika 23/764896226.jpg", label: "Artisan Objects", alt: "Lounge and living room" },
         { img: "images/srpskihratrnika 23/sr23223.jpg", label: "Stone Wellness", alt: "Private dining table" }
       ],
+      5: [
+        { img: "images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg", label: "Banquet Hall", alt: "Main gathering hall for up to 15 guests" },
+        { img: "images/konoba/IMG-c243e51b30aadddb5d4dd0c7a1dd5a69-V.jpg", label: "Fireplace & BBQ", alt: "Traditional fireplace and grill area" },
+        { img: "images/konoba/IMG-c3e6d8fd10c961b403028475b5fc7b31-V.jpg", label: "Ambient Hall", alt: "Ambient gathering space" },
+        { img: "images/konoba/IMG-4a81acc0c2b98677dd185f456f4ea7a7-V.jpg", label: "Dining Tables", alt: "Wooden dining tables for groups" }
+      ],
       all: [
         { img: "images/ddk21/1/dd17.jpg", label: "Master Suite", alt: "Master bedroom suite" },
         { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Logo", alt: "Elit Lux Logo" },
@@ -4683,10 +4719,10 @@
       selector.querySelectorAll('.apt-pill').forEach(function(p) {
         const n = parseInt(p.dataset.apt);
         p.classList.remove('apt-pill-active');
-        p.textContent = String(n);
+        p.textContent = (n === 5 ? '5 · Konoba' : String(n));
       });
       btn.classList.add('apt-pill-active');
-      btn.textContent = 'Apartment ' + num;
+      btn.textContent = (num === 5 ? 'Konoba' : 'Apartment ' + num);
       const form = btn.closest('form');
       if (form) {
         const hidden = form.querySelector('#penthouseSelect');

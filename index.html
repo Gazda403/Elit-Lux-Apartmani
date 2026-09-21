@@ -1778,14 +1778,21 @@
 
     .residence-cards-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
       margin-top: 40px;
       margin-bottom: 20px;
       width: 100%;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
+      .residence-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 960px) {
       .residence-cards-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -3384,6 +3391,7 @@
             <button type="button" class="deco-pill-tab outline" data-filter="2" data-apt="2">2</button>
             <button type="button" class="deco-pill-tab outline" data-filter="3" data-apt="3">3</button>
             <button type="button" class="deco-pill-tab outline" data-filter="4" data-apt="4">4</button>
+            <button type="button" class="deco-pill-tab outline" data-filter="5" data-apt="5">5 · Konoba</button>
           </div>
           <h3 class="gallery-title">gallery.</h3>
         </div>
@@ -3538,7 +3546,7 @@
         <div class="property-filter-bar" id="propertyFilterBar">
           <span class="property-filter-label">Filter:</span>
           <button type="button" class="filter-pill active" data-filter="all" id="filterAll">
-            Svi Apartmani <span class="filter-pill-count" id="filterAllCount">4</span>
+            Sve Jedinice <span class="filter-pill-count" id="filterAllCount">5</span>
           </button>
         </div>
 
@@ -3627,10 +3635,31 @@
             </div>
           </article>
 
+          <!-- Kartica 5: Konoba Elit Lux — Mjesto za druženje do 15 ljudi -->
+          <article class="residence-slide-card" data-location="pale" style="border-color: rgba(194,162,111,0.5);">
+            <div class="residence-card-image">
+              <img src="images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg" alt="Konoba Elit Lux — Mjesto za druženje do 15 ljudi" loading="lazy" decoding="async" />
+              <div class="residence-card-gradient"></div>
+            </div>
+            <div class="residence-card-top-tags">
+              <span class="residence-location-badge" style="background: var(--accent-gold); color: #000;">Druženja do 15 osoba</span>
+            </div>
+            <div class="residence-card-content">
+              <h3 class="residence-card-title">KONOBA ELIT LUX</h3>
+              <div class="residence-card-meta">
+                <span>Do 15 Ljudi</span> • <span>Kamin i Roštilj</span> • <span>Smart TV</span>
+              </div>
+              <div class="residence-card-price-row">
+                <div class="residence-price">Po Dogovoru <span>/ UPIT</span></div>
+                <button class="card-book-btn" onclick="bookApt(5)" aria-label="Rezerviši Konobu">Rezerviši ↗</button>
+              </div>
+            </div>
+          </article>
+
           <!-- Jahorina Coming Soon State -->
           <div id="jahorinaComingSoon" style="display:none; grid-column: 1 / -1; padding: 48px 24px; text-align: center; background: rgba(255,255,255,0.03); border: 1px dashed rgba(194,162,111,0.3); border-radius: 12px;">
             <p style="font-family: var(--font-display-wide); font-size: 1.1rem; color: #fff; margin-bottom: 8px;">Uskoro novi apartmani na Jahorini</p>
-            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.5;">Trenutno su dostupne 4 premium jedinice u centru Pala (15 min do ski staza). Nove ski-in/ski-out jedinice na Jahorini stižu uskoro!</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.5;">Trenutno je dostupno 5 premium jedinica u Palama (4 luksuzna apartmana + Konoba za druženje do 15 ljudi). Nove ski-in/ski-out jedinice na Jahorini stižu uskoro!</p>
           </div>
         </div>
       </div>
@@ -3732,6 +3761,7 @@
                 <button type="button" class="apt-pill" data-apt="2" onclick="selectApt(this, 2)">2</button>
                 <button type="button" class="apt-pill" data-apt="3" onclick="selectApt(this, 3)">3</button>
                 <button type="button" class="apt-pill" data-apt="4" onclick="selectApt(this, 4)">4</button>
+                <button type="button" class="apt-pill" data-apt="5" onclick="selectApt(this, 5)">5 · Konoba</button>
               </div>
               <div class="apt-preview" id="aptPreview">
                 <img src="images/Living_room_interior_design_20260918111930.jpeg" id="aptPreviewImg" alt="Apartman preview" loading="lazy" decoding="async" />
@@ -4463,12 +4493,20 @@
         { img: "images/srpskihratrnika 23/764896226.jpg", label: "Unikatni Detalji", alt: "Dnevni boravak" },
         { img: "images/srpskihratrnika 23/sr23223.jpg", label: "Kameni Wellness", alt: "Trpezarijski prostor" }
       ],
+      5: [
+        { img: "images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg", label: "Banket Sala", alt: "Glavna sala za druženje do 15 osoba" },
+        { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Logo", alt: "Elit Lux Logo" },
+        { img: "images/konoba/IMG-c243e51b30aadddb5d4dd0c7a1dd5a69-V.jpg", label: "Kamin & Roštilj", alt: "Tradicionalno ognjište, kamin i opremljena kuhinja" },
+        { img: "images/konoba/IMG-c3e6d8fd10c961b403028475b5fc7b31-V.jpg", label: "Ambijentalna Sala", alt: "Prostor za proslave sa Smart TV-om" },
+        { img: "images/konoba/IMG-4a81acc0c2b98677dd185f456f4ea7a7-V.jpg", label: "Trpezarijski Stolovi", alt: "Drveni stolovi i rustični ambijent" },
+        { img: "images/772439273.jpg", label: "Grupno Druženje", alt: "Mjesto za druženje i proslave do 15 ljudi" }
+      ],
       all: [
         { img: "images/ddk21/1/dd17.jpg", label: "Glavni Suite", alt: "Glavna spavaća soba" },
         { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Logo", alt: "Elit Lux Logo" },
         { img: "images/ddk21/1/626413572.jpg", label: "Dnevni Boravak", alt: "Dnevni boravak" },
         { img: "images/ddk21/1/dd1111111.jpg", label: "Privatna Trpeza", alt: "Trpezarijski sto" },
-        { img: "images/ddk21/1/dd1sp.jpg", label: "Unikatni Detalji", alt: "Predsoblje s ogledalom" },
+        { img: "images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg", label: "Konoba", alt: "Konoba — prostor za druženje do 15 osoba" },
         { img: "images/ddk21/1/cenifadd1.jpg", label: "Kameni Wellness", alt: "Kupatilo i wellness" }
       ]
     };
@@ -4781,6 +4819,11 @@
         label: 'Apartman 4 Elit Lux — Dobrovoljnih davalaca krvi 21',
         value: 'Apartman 4 Elit Lux',
         img: 'images/ddk21/2/dd2222.jpg'
+      },
+      5: {
+        label: 'Konoba Elit Lux — Mjesto za druženje do 15 ljudi',
+        value: 'Konoba Elit Lux',
+        img: 'images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg'
       }
     };
     function selectApt(btn, num) {
@@ -4788,10 +4831,10 @@
       selector.querySelectorAll('.apt-pill').forEach(function(p) {
         const n = parseInt(p.dataset.apt);
         p.classList.remove('apt-pill-active');
-        p.textContent = String(n);
+        p.textContent = (n === 5 ? '5 · Konoba' : String(n));
       });
       btn.classList.add('apt-pill-active');
-      btn.textContent = 'Apartman ' + num;
+      btn.textContent = (num === 5 ? 'Konoba' : 'Apartman ' + num);
       const form = btn.closest('form');
       if (form) {
         const hidden = form.querySelector('#penthouseSelect');
