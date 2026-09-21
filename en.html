@@ -101,29 +101,92 @@
       { "@type": "Language", "name": "Bosnian" },
       { "@type": "Language", "name": "English" }
     ],
+    "hasMap": "https://maps.google.com/?q=Pale,Bosna+i+Hercegovina",
+    "tourBookingPage": "https://www.elitlux.ba/en.html#inquiry",
     "containsPlace": [
       {
         "@type": "Apartment",
-        "name": "Deluxe Apartment Jahorina – Dobrovoljnih davalaca krvi 21",
-        "description": "Spacious luxury apartment near Jahorina with living room, dining area, master suite and stone wellness space. Off-mountain access.",
-        "numberOfRooms": 3,
-        "floorSize": { "@type": "QuantitativeValue", "value": 95, "unitCode": "MTK" },
-        "petsAllowed": false,
-        "url": "https://www.elitlux.ba/en.html#gallery"
-      },
-      {
-        "@type": "Apartment",
-        "name": "Mini Apartment – Carice Milice 22",
-        "description": "Elegant apartment in Pale with fully equipped living room, suite and dining area. Perfect for couples and short stays.",
+        "name": "Apartment 1 Elit Lux – Dobrovoljnih davalaca krvi 21",
+        "description": "Luxury apartment in Pale with modern living area, separate bedroom, private parking, and swift access to Jahorina ski slopes.",
         "numberOfRooms": 2,
-        "url": "https://www.elitlux.ba/en.html#gallery"
+        "floorSize": { "@type": "QuantitativeValue", "value": 52, "unitCode": "MTK" },
+        "petsAllowed": false,
+        "url": "https://www.elitlux.ba/en.html#apartments",
+        "offers": {
+          "@type": "Offer",
+          "price": "40.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "40.00",
+            "priceCurrency": "EUR",
+            "unitCode": "DAY"
+          }
+        }
       },
       {
         "@type": "Apartment",
-        "name": "Suite Residence Pale – Upper Floor",
-        "description": "Exclusive upper-floor suite with private terrace and panoramic views of Pale and Mount Jahorina.",
-        "numberOfRooms": 4,
-        "url": "https://www.elitlux.ba/en.html#gallery"
+        "name": "Apartment 2 Elit Lux – Carice Milice 22",
+        "description": "Sophisticated apartment in Pale center featuring contemporary design, private parking, and high-speed ski trail connectivity.",
+        "numberOfRooms": 2,
+        "floorSize": { "@type": "QuantitativeValue", "value": 48, "unitCode": "MTK" },
+        "petsAllowed": false,
+        "url": "https://www.elitlux.ba/en.html#apartments",
+        "offers": {
+          "@type": "Offer",
+          "price": "40.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "40.00",
+            "priceCurrency": "EUR",
+            "unitCode": "DAY"
+          }
+        }
+      },
+      {
+        "@type": "Apartment",
+        "name": "Apartment 3 Elit Lux – Dobrovoljnih davalaca krvi 21",
+        "description": "Generous 2-bedroom residence with ambient lighting and supreme comfort tailored for families and group ski getaways.",
+        "numberOfRooms": 3,
+        "floorSize": { "@type": "QuantitativeValue", "value": 68, "unitCode": "MTK" },
+        "petsAllowed": false,
+        "url": "https://www.elitlux.ba/en.html#apartments",
+        "offers": {
+          "@type": "Offer",
+          "price": "40.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "40.00",
+            "priceCurrency": "EUR",
+            "unitCode": "DAY"
+          }
+        }
+      },
+      {
+        "@type": "Apartment",
+        "name": "Apartment 4 Elit Lux – Dobrovoljnih davalaca krvi 21",
+        "description": "Exclusive designer suite in Pale featuring bespoke furnishings, artisanal aesthetics, and a 10% ski rental discount.",
+        "numberOfRooms": 2,
+        "floorSize": { "@type": "QuantitativeValue", "value": 55, "unitCode": "MTK" },
+        "petsAllowed": false,
+        "url": "https://www.elitlux.ba/en.html#apartments",
+        "offers": {
+          "@type": "Offer",
+          "price": "40.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "40.00",
+            "priceCurrency": "EUR",
+            "unitCode": "DAY"
+          }
+        }
       }
     ],
     "sameAs": [
@@ -2378,6 +2441,522 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* =========================================================================
+       DATE RANGE — enhanced connector
+       ========================================================================= */
+    .date-range-wrapper {
+      position: relative;
+    }
+    .date-range-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: end;
+      gap: 8px;
+    }
+    .date-range-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 14px;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    @media (max-width: 420px) {
+      .date-range-grid { grid-template-columns: 1fr; }
+      .date-range-connector { display: none; }
+    }
+
+    /* =========================================================================
+       PRICE CALCULATOR
+       ========================================================================= */
+    .price-calc-panel {
+      margin-top: 12px;
+      background: linear-gradient(135deg, #141416 0%, #1e1e22 100%);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid rgba(194, 162, 111, 0.3);
+      animation: calcFadeIn 0.4s var(--ease-out-expo);
+    }
+    .price-calc-panel.visible { display: flex; }
+    @keyframes calcFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .price-calc-nights {
+      font-size: 0.78rem;
+      color: rgba(245,243,236,0.65);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .price-calc-nights strong {
+      color: #fff;
+      font-weight: 700;
+    }
+    .price-calc-total {
+      font-family: var(--font-display-wide);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .price-calc-total span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: rgba(194, 162, 111, 0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================================
+       "REZERVIŠI" BUTTON ON APARTMENT CARDS
+       ========================================================================= */
+    .card-book-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      background: var(--accent-gold);
+      color: #141416;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s var(--ease-out-expo);
+      font-family: var(--font-sans);
+    }
+    .card-book-btn:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* =========================================================================
+       PROPERTY FILTER BAR
+       ========================================================================= */
+    .property-filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .property-filter-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted-dark);
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    .filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 20px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: rgba(245,243,236,0.6);
+      font-family: var(--font-sans);
+      transition: all 0.25s ease;
+    }
+    .filter-pill:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border-color: rgba(255,255,255,0.4);
+    }
+    .filter-pill.active {
+      background: #fff;
+      color: #141416;
+      border-color: #fff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+    .filter-pill-count {
+      background: rgba(0,0,0,0.15);
+      border-radius: 9999px;
+      padding: 1px 7px;
+      font-size: 0.65rem;
+    }
+    .filter-pill.active .filter-pill-count {
+      background: rgba(0,0,0,0.12);
+    }
+    .filter-coming-soon {
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      opacity: 0.55;
+      text-transform: uppercase;
+    }
+
+    /* card hide/show for filter */
+    .residence-slide-card {
+      transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.4s ease !important;
+    }
+    .residence-slide-card.card-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.95);
+    }
+
+    /* =========================================================================
+       FLOATING WHATSAPP FAB
+       ========================================================================= */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .whatsapp-fab-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 9999px;
+      padding: 14px 22px;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+      transition: all 0.3s var(--ease-out-expo);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .whatsapp-fab-btn:hover {
+      background: #1fba59;
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55);
+    }
+    .whatsapp-fab-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      flex-shrink: 0;
+    }
+    .whatsapp-fab-pulse {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 14px;
+      height: 14px;
+      background: #ff4444;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      animation: fabPulse 2s infinite;
+    }
+    @keyframes fabPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7); }
+      70%  { box-shadow: 0 0 0 8px rgba(255, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); }
+    }
+    @media (max-width: 480px) {
+      .whatsapp-fab { bottom: 16px; right: 16px; }
+      .whatsapp-fab-btn { padding: 12px 16px; font-size: 0.75rem; }
+    }
+
+    /* =========================================================================
+       LOCATION & TRAVEL CARD
+       ========================================================================= */
+    .location-travel-section {
+      background: #141416;
+      border-radius: 12px;
+      padding: 40px;
+      margin: 60px 0 0;
+      border: 1px solid rgba(194, 162, 111, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .location-travel-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top right, rgba(194,162,111,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .location-travel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .location-travel-header svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent-gold);
+      stroke-width: 1.8;
+      fill: none;
+      flex-shrink: 0;
+    }
+    .location-travel-title {
+      font-family: var(--font-display-wide);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+    }
+    .travel-items-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 640px) {
+      .travel-items-grid { grid-template-columns: 1fr; }
+      .location-travel-section { padding: 28px 20px; }
+    }
+    .travel-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .travel-item:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(194,162,111,0.3);
+    }
+    .travel-item-time {
+      font-family: var(--font-display-wide);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      line-height: 1;
+      min-width: 70px;
+      flex-shrink: 0;
+    }
+    .travel-item-time span {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: rgba(194,162,111,0.7);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+    }
+    .travel-item-icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(194,162,111,0.12);
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .travel-item-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--accent-gold);
+      stroke-width: 1.8;
+      fill: none;
+    }
+    .travel-item-desc {
+      font-size: 0.82rem;
+      color: rgba(245,243,236,0.75);
+      line-height: 1.35;
+      font-weight: 500;
+    }
+    .travel-item-desc strong {
+      color: #fff;
+      display: block;
+      font-size: 0.85rem;
+    }
+
+    /* =========================================================================
+       SKI DISCOUNT MODAL
+       ========================================================================= */
+    .ski-discount-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      color: var(--accent-gold);
+      border-bottom: 1px dashed rgba(194,162,111,0.5);
+      transition: border-color 0.2s ease;
+    }
+    .ski-discount-trigger:hover {
+      border-color: var(--accent-gold);
+    }
+    .ski-discount-trigger svg {
+      width: 13px;
+      height: 13px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+    .ski-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11,11,12,0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 50000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .ski-modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .ski-modal-box {
+      background: #fff;
+      border-radius: 12px;
+      max-width: 480px;
+      width: 100%;
+      overflow: hidden;
+      transform: scale(0.94) translateY(16px);
+      transition: transform 0.4s var(--ease-out-expo);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    }
+    .ski-modal-overlay.open .ski-modal-box {
+      transform: scale(1) translateY(0);
+    }
+    .ski-modal-header {
+      background: linear-gradient(135deg, #141416 0%, #1e1e22 100%);
+      padding: 28px 32px 24px;
+      position: relative;
+      border-bottom: 1px solid rgba(194,162,111,0.3);
+    }
+    .ski-modal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-gold);
+      color: #141416;
+      border-radius: 9999px;
+      padding: 6px 14px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .ski-modal-title {
+      font-family: var(--font-display-wide);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .ski-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+    .ski-modal-close:hover { background: rgba(255,255,255,0.2); }
+    .ski-modal-body {
+      padding: 28px 32px 32px;
+    }
+    .ski-modal-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .ski-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .ski-step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--accent-gold);
+      color: #141416;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .ski-step-text {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: #444;
+      padding-top: 4px;
+    }
+    .ski-step-text strong { color: #141416; }
+    .ski-modal-note {
+      background: #f7f5f2;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    /* =========================================================================
+       WINTER MODE — DYNAMIC COLOR VARS
+       ========================================================================= */
+    body.winter-mode-active {
+      --accent-gold: #7dd3fc;
+    }
+    body.winter-mode-active .residence-price {
+      color: #7dd3fc;
+    }
+    body.winter-mode-active .price-calc-total {
+      color: #7dd3fc;
+    }
+    .winter-season-badge {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(14, 30, 48, 0.9);
+      border: 1px solid rgba(125, 211, 252, 0.4);
+      border-radius: 9999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #7dd3fc;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    body.winter-mode-active .winter-season-badge {
+      display: inline-flex;
+    }
   </style>
 </head>
 <body class="preloader-active">
@@ -2758,8 +3337,8 @@
           </div>
 
           <div class="curated-photo-cell">
-            <img src="images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg" alt="Elit Lux Residences Logo" loading="lazy" decoding="async" />
-            <div class="curated-photo-label">Elit Lux Residences</div>
+            <img src="images/oura_still_life.jpg" alt="Artisan interior craft — wood and natural stone" loading="lazy" decoding="async" />
+            <div class="curated-photo-label">Artisan Details</div>
           </div>
 
           <div class="curated-photo-cell">
@@ -2892,31 +3471,38 @@
           </a>
         </div>
 
+        <!-- Property Filter Bar (All / Pale Center / Jahorina) -->
+        <div class="property-filter-bar">
+          <span class="property-filter-label">Filter:</span>
+          <button type="button" class="filter-pill active" data-filter="all">All Units <span class="filter-pill-count">4</span></button>
+          <button type="button" class="filter-pill" data-filter="pale">Pale Center <span class="filter-pill-count">4</span></button>
+          <button type="button" class="filter-pill" data-filter="jahorina">Jahorina <span class="filter-coming-soon">(Coming Soon)</span></button>
+        </div>
+
         <div class="residence-cards-grid">
-<!-- Card 1: Apartman 1 Elit Lux -->
-          <article class="residence-slide-card">
+          <!-- Card 1: Apartman 1 Elit Lux -->
+          <article class="residence-slide-card" data-location="pale">
             <div class="residence-card-image">
               <img src="images/Living_room_interior_design_20260918111930.jpeg" alt="Apartman 1 Elit Lux Pale" loading="lazy" decoding="async" />
-              <div class="residence-card-gradient">
-        </div>
-      </div>
+              <div class="residence-card-gradient"></div>
+            </div>
             <div class="residence-card-top-tags">
               <span class="residence-location-badge">Dobrovoljnih davalaca krvi 21, Pale</span>
             </div>
             <div class="residence-card-content">
-              <h3 class="residence-card-title">APARTMAN 1 ELIT LUX</h3>
+              <h3 class="residence-card-title">APARTMENT 1 ELIT LUX</h3>
               <div class="residence-card-meta">
-                <span>1 Bedroom</span> • <span>Parking</span> • <span>10% Ski Equipment Discount</span>
+                <span>1 Bedroom</span> • <span>Parking</span> • <button type="button" class="ski-discount-trigger" onclick="openSkiModal(event)" aria-label="Ski discount details">10% Ski Equipment Discount <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></button>
               </div>
               <div class="residence-card-price-row">
                 <div class="residence-price">€40 <span>/ NIGHT</span></div>
-                <span class="residence-explore-link">Explore →</span>
+                <button class="card-book-btn" onclick="bookApt(1)" aria-label="Book Apartment 1">Book ↗</button>
               </div>
             </div>
           </article>
 
           <!-- Card 2: Apartman 2 Elit Lux -->
-          <article class="residence-slide-card">
+          <article class="residence-slide-card" data-location="pale">
             <div class="residence-card-image">
               <img src="images/ddk21/2/dd2222.jpg" alt="Apartman 2 Elit Lux Pale" loading="lazy" decoding="async" />
               <div class="residence-card-gradient"></div>
@@ -2925,19 +3511,19 @@
               <span class="residence-location-badge">Carice Milice 22, Pale</span>
             </div>
             <div class="residence-card-content">
-              <h3 class="residence-card-title">APARTMAN 2 ELIT LUX</h3>
+              <h3 class="residence-card-title">APARTMENT 2 ELIT LUX</h3>
               <div class="residence-card-meta">
-                <span>1 Bedroom</span> • <span>Parking</span> • <span>10% Ski Equipment Discount</span>
+                <span>1 Bedroom</span> • <span>Parking</span> • <button type="button" class="ski-discount-trigger" onclick="openSkiModal(event)" aria-label="Ski discount details">10% Ski Equipment Discount <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></button>
               </div>
               <div class="residence-card-price-row">
                 <div class="residence-price">€40 <span>/ NIGHT</span></div>
-                <span class="residence-explore-link">Explore →</span>
+                <button class="card-book-btn" onclick="bookApt(2)" aria-label="Book Apartment 2">Book ↗</button>
               </div>
             </div>
           </article>
 
           <!-- Card 3: Apartman 3 Elit Lux -->
-          <article class="residence-slide-card" style="border-color: rgba(255,255,255,0.4);">
+          <article class="residence-slide-card" data-location="pale" style="border-color: rgba(255,255,255,0.4);">
             <div class="residence-card-image">
               <img src="images/Living_and_dining_room_layout_20260918112245.jpeg" alt="Apartman 3 Elit Lux Pale" loading="lazy" decoding="async" />
               <div class="residence-card-gradient"></div>
@@ -2946,19 +3532,19 @@
               <span class="residence-location-badge" style="background: var(--accent-gold); color: #000;">Dobrovoljnih davalaca krvi 21, Pale</span>
             </div>
             <div class="residence-card-content">
-              <h3 class="residence-card-title">APARTMAN 3 ELIT LUX</h3>
+              <h3 class="residence-card-title">APARTMENT 3 ELIT LUX</h3>
               <div class="residence-card-meta">
-                <span>2 Bedrooms</span> • <span>Parking</span> • <span>10% Ski Equipment Discount</span>
+                <span>2 Bedrooms</span> • <span>Parking</span> • <button type="button" class="ski-discount-trigger" onclick="openSkiModal(event)" aria-label="Ski discount details">10% Ski Equipment Discount <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></button>
               </div>
               <div class="residence-card-price-row">
                 <div class="residence-price">€40 <span>/ NIGHT</span></div>
-                <span class="residence-explore-link">Explore →</span>
+                <button class="card-book-btn" onclick="bookApt(3)" aria-label="Book Apartment 3">Book ↗</button>
               </div>
             </div>
           </article>
 
           <!-- Card 4: Apartman 4 Elit Lux -->
-          <article class="residence-slide-card" style="border-color: rgba(255,255,255,0.4);">
+          <article class="residence-slide-card" data-location="pale" style="border-color: rgba(255,255,255,0.4);">
             <div class="residence-card-image">
               <img src="images/Modern_living_room_interior_furn…_20260918112257.jpeg" alt="Apartman 4 Elit Lux Pale" loading="lazy" decoding="async" />
               <div class="residence-card-gradient"></div>
@@ -2967,18 +3553,22 @@
               <span class="residence-location-badge" style="background: var(--accent-gold); color: #000;">Dobrovoljnih davalaca krvi 21, Pale</span>
             </div>
             <div class="residence-card-content">
-              <h3 class="residence-card-title">APARTMAN 4 ELIT LUX</h3>
+              <h3 class="residence-card-title">APARTMENT 4 ELIT LUX</h3>
               <div class="residence-card-meta">
-                <span>1 Bedroom</span> • <span>Parking</span> • <span>10% Ski Equipment Discount</span>
+                <span>1 Bedroom</span> • <span>Parking</span> • <button type="button" class="ski-discount-trigger" onclick="openSkiModal(event)" aria-label="Ski discount details">10% Ski Equipment Discount <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></button>
               </div>
               <div class="residence-card-price-row">
                 <div class="residence-price">€40 <span>/ NIGHT</span></div>
-                <span class="residence-explore-link">Explore →</span>
+                <button class="card-book-btn" onclick="bookApt(4)" aria-label="Book Apartment 4">Book ↗</button>
               </div>
             </div>
           </article>
 
-          
+          <!-- Jahorina Coming Soon State -->
+          <div id="jahorinaComingSoon" style="display:none; grid-column: 1 / -1; padding: 48px 24px; text-align: center; background: rgba(255,255,255,0.03); border: 1px dashed rgba(194,162,111,0.3); border-radius: 12px;">
+            <p style="font-family: var(--font-display-wide); font-size: 1.1rem; color: #fff; margin-bottom: 8px;">Upcoming chalets on Jahorina</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.5;">Currently, 4 premium residences are available in Pale center (12–15 minutes to Jahorina ski lifts). New ski-in/ski-out chalets on Mount Jahorina are launching next winter!</p>
+          </div>
         </div>
       </div>
 
@@ -3040,15 +3630,26 @@
             </div>
 
             <div class="form-group">
-              <div class="date-range-grid">
-                <div>
-                  <label class="form-label" for="checkInDate">Check-In</label>
-                  <input type="date" id="checkInDate" name="checkInDate" class="form-input" required onchange="updateStayNights()" />
+              <div class="date-range-wrapper">
+                <div class="date-range-grid">
+                  <div>
+                    <label class="form-label" for="checkInDate">Check-In</label>
+                    <input type="date" id="checkInDate" name="checkInDate" class="form-input" required onchange="updateStayNights()" />
+                  </div>
+                  <div class="date-range-connector">&rarr;</div>
+                  <div>
+                    <label class="form-label" for="checkOutDate">Check-Out</label>
+                    <input type="date" id="checkOutDate" name="checkOutDate" class="form-input" required onchange="updateStayNights()" />
+                  </div>
                 </div>
-                <div>
-                  <label class="form-label" for="checkOutDate">Check-Out</label>
-                  <input type="date" id="checkOutDate" name="checkOutDate" class="form-input" required onchange="updateStayNights()" />
+              </div>
+              <!-- Real-time Price Calculator -->
+              <div class="price-calc-panel" id="priceCalcPanel">
+                <div class="price-calc-nights">
+                  <strong id="calcNights">0</strong> nights &times; 40 €/night
+                  <span class="winter-season-badge" style="margin-left:8px;">❄ Winter Season</span>
                 </div>
+                <div class="price-calc-total"><span>Total </span><span id="calcTotal">0</span> €</div>
               </div>
               <div id="stayDurationInfo" class="stay-duration-info" style="display: none;">
                 <span class="stay-nights-badge" id="stayNightsText"></span>
@@ -3060,15 +3661,15 @@
               <input type="hidden" id="penthouseSelect" name="penthouseSelect" value="Apartman 1 Elit Lux" />
               <div class="apt-pill-selector" id="aptPillSelector">
                 <button type="button" class="apt-pill apt-pill-active" data-apt="1" onclick="selectApt(this, 1)">
-                  Apartman 1
+                  Apartment 1
                 </button>
                 <button type="button" class="apt-pill" data-apt="2" onclick="selectApt(this, 2)">2</button>
                 <button type="button" class="apt-pill" data-apt="3" onclick="selectApt(this, 3)">3</button>
                 <button type="button" class="apt-pill" data-apt="4" onclick="selectApt(this, 4)">4</button>
               </div>
               <div class="apt-preview" id="aptPreview">
-                <img src="images/Living_room_interior_design_20260918111930.jpeg" id="aptPreviewImg" alt="Apartman preview" loading="lazy" decoding="async" />
-                <span id="aptPreviewLabel">Apartman 1 Elit Lux &mdash; Dobrovoljnih davalaca krvi 21</span>
+                <img src="images/Living_room_interior_design_20260918111930.jpeg" id="aptPreviewImg" alt="Apartment preview" loading="lazy" decoding="async" />
+                <span id="aptPreviewLabel">Apartment 1 Elit Lux &mdash; Dobrovoljnih davalaca krvi 21</span>
               </div>
             </div>
 
@@ -3099,9 +3700,87 @@
             <a href="#amenities">Amenities</a>
           </div>
         </footer>
+
+        <!-- Location & Travel Card -->
+        <div class="location-travel-section" id="location">
+          <div class="location-travel-header">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="location-travel-title">Location &amp; Travel Distance</span>
+          </div>
+          <div class="travel-items-grid">
+            <div class="travel-item">
+              <div class="travel-item-time">15<span>min</span></div>
+              <div class="travel-item-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 17l4-8 4 4 4-6 4 6"/><path d="M3 20h18"/></svg>
+              </div>
+              <div class="travel-item-desc"><strong>Jahorina Ski Slopes</strong>Olympic Ski Center Poljice</div>
+            </div>
+            <div class="travel-item">
+              <div class="travel-item-time">5<span>min</span></div>
+              <div class="travel-item-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 8v8M8 12h8"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+              </div>
+              <div class="travel-item-desc"><strong>Ravna Planina Gondola</strong>Direct express cabin access</div>
+            </div>
+            <div class="travel-item">
+              <div class="travel-item-time">20<span>min</span></div>
+              <div class="travel-item-icon">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.57 12a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.52 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.78-1.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="travel-item-desc"><strong>Sarajevo Airport</strong>International Airport SJJ</div>
+            </div>
+            <div class="travel-item">
+              <div class="travel-item-time">500<span>meters</span></div>
+              <div class="travel-item-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="travel-item-desc"><strong>Pale Promenade & Center</strong>Supermarkets, restaurants, cafes</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
+
+  <!-- Floating WhatsApp FAB -->
+  <div class="whatsapp-fab" id="whatsappFab">
+    <a href="https://wa.me/38765000000?text=Hello%21+I+am+interested+in+booking+Apartment+1+Elit+Lux." id="whatsappFabBtn" target="_blank" rel="noopener noreferrer" class="whatsapp-fab-btn" aria-label="Quick inquiry on WhatsApp" style="position:relative;">
+      <span class="whatsapp-fab-pulse"></span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      Quick WhatsApp Inquiry
+    </a>
+  </div>
+
+  <!-- Ski Discount Modal -->
+  <div class="ski-modal-overlay" id="skiDiscountModal" role="dialog" aria-modal="true" aria-labelledby="skiModalTitle">
+    <div class="ski-modal-box">
+      <div class="ski-modal-header">
+        <div class="ski-modal-badge">Exclusive Guest Benefit</div>
+        <h3 class="ski-modal-title" id="skiModalTitle">10% Ski Equipment Discount</h3>
+        <button type="button" class="ski-modal-close" id="skiModalClose" aria-label="Close modal">✕</button>
+      </div>
+      <div class="ski-modal-body">
+        <div class="ski-modal-steps">
+          <div class="ski-step">
+            <div class="ski-step-num">1</div>
+            <div class="ski-step-text"><strong>Book your stay</strong> in any of our 4 Elit Lux apartments.</div>
+          </div>
+          <div class="ski-step">
+            <div class="ski-step-num">2</div>
+            <div class="ski-step-text"><strong>Receive your voucher</strong> during check-in or via digital message.</div>
+          </div>
+          <div class="ski-step">
+            <div class="ski-step-num">3</div>
+            <div class="ski-step-text"><strong>Present voucher at ski rental</strong> on Jahorina for an instant 10% discount on skis, boards, boots, and helmets.</div>
+          </div>
+        </div>
+        <div class="ski-modal-note">
+          Valid throughout your entire stay across top partner rental stations on Jahorina.
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Lightbox Modal -->
   <div class="lightbox-modal" id="lightboxModal">
@@ -3657,7 +4336,7 @@
     const galleryData = {
       1: [
         { img: "images/ddk21/1/dd17.jpg", label: "Master Suite", alt: "Master bedroom suite" },
-        { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Residences", alt: "Elit Lux Residences Logo" },
+        { img: "images/oura_still_life.jpg", label: "Artisan Details", alt: "Artisan interior craft — wood and natural stone" },
         { img: "images/ddk21/1/626413572.jpg", label: "Lounge Hearth", alt: "Lounge and living room" },
         { img: "images/ddk21/1/dd1111111.jpg", label: "Private Dining", alt: "Private dining table" },
         { img: "images/ddk21/1/dd1sp.jpg", label: "Artisan Objects", alt: "Foyer entrance and mirror" },
@@ -3665,7 +4344,7 @@
       ],
       2: [
         { img: "images/ddk21/2/626424316.jpg", label: "Master Suite", alt: "Master bedroom suite" },
-        { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Residences", alt: "Elit Lux Residences Logo" },
+        { img: "images/oura_still_life.jpg", label: "Artisan Details", alt: "Artisan interior craft — wood and natural stone" },
         { img: "images/ddk21/2/dd2222.jpg", label: "Lounge Hearth", alt: "Lounge and living room" },
         { img: "images/802c3f4d-4224-4667-8f11-eb6fc7860ed7.png", label: "Private Dining", alt: "Private dining table" },
         { img: "images/897ad606-49a8-4ae3-9d58-ae2082cb60aa.png", label: "Artisan Objects", alt: "Artisan objects" },
@@ -3673,7 +4352,7 @@
       ],
       3: [
         { img: "images/caricemilice22/626424530.jpg", label: "Master Suite", alt: "Ambient architectural lighting" },
-        { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Residences", alt: "Elit Lux Residences Logo" },
+        { img: "images/oura_still_life.jpg", label: "Artisan Details", alt: "Artisan interior craft — wood and natural stone" },
         { img: "images/caricemilice22/aprt22222.webp", label: "Lounge Hearth", alt: "Lounge and living room" },
         { img: "images/caricemilice22/aprtm222222222222.webp", label: "Private Dining", alt: "Private dining bar & wine display" },
         { img: "images/caricemilice22/aprtm2222.webp", label: "Artisan Objects", alt: "Master bedroom suite" },
@@ -3681,7 +4360,7 @@
       ],
       4: [
         { img: "images/srpskihratrnika 23/sr323232232.jpg", label: "Master Suite", alt: "Artisan objects" },
-        { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Residences", alt: "Elit Lux Residences Logo" },
+        { img: "images/oura_still_life.jpg", label: "Artisan Details", alt: "Artisan interior craft — wood and natural stone" },
         { img: "images/srpskihratrnika 23/sr23.jpg", label: "Lounge Hearth", alt: "Master bedroom suite" },
         { img: "images/srpskihratrnika 23/sr233333333333.jpg", label: "Private Dining", alt: "Stone bath & wellness" },
         { img: "images/srpskihratrnika 23/764896226.jpg", label: "Artisan Objects", alt: "Lounge and living room" },
@@ -3689,7 +4368,7 @@
       ],
       all: [
         { img: "images/ddk21/1/dd17.jpg", label: "Master Suite", alt: "Master bedroom suite" },
-        { img: "images/Corporate_logo_featuring_house_icon_2K_20260917104516.jpeg", label: "Elit Lux Residences", alt: "Elit Lux Residences Logo" },
+        { img: "images/oura_still_life.jpg", label: "Artisan Details", alt: "Artisan interior craft — wood and natural stone" },
         { img: "images/ddk21/1/626413572.jpg", label: "Lounge Hearth", alt: "Lounge and living room" },
         { img: "images/ddk21/1/dd1111111.jpg", label: "Private Dining", alt: "Private dining table" },
         { img: "images/ddk21/1/dd1sp.jpg", label: "Artisan Objects", alt: "Foyer entrance and mirror" },
@@ -4015,7 +4694,7 @@
         p.textContent = String(n);
       });
       btn.classList.add('apt-pill-active');
-      btn.textContent = 'Apartman ' + num;
+      btn.textContent = 'Apartment ' + num;
       const form = btn.closest('form');
       if (form) {
         const hidden = form.querySelector('#penthouseSelect');
@@ -4026,6 +4705,24 @@
         preview.querySelector('img').src = aptData[num].img;
         preview.querySelector('span').textContent = aptData[num].label;
       }
+
+      // Update WhatsApp FAB link with selected apartment
+      const fabBtn = document.getElementById('whatsappFabBtn');
+      if (fabBtn && aptData[num]) {
+        const msg = encodeURIComponent(`Hello! I am interested in booking ${aptData[num].value}.`);
+        fabBtn.href = `https://wa.me/38765000000?text=${msg}`;
+      }
+    }
+
+    function bookApt(num) {
+      const pill = document.querySelector(`.apt-pill[data-apt="${num}"]`);
+      if (pill) {
+        selectApt(pill, num);
+      }
+      const inquiry = document.getElementById('inquiry');
+      if (inquiry) {
+        inquiry.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     function updateStayNights() {
@@ -4033,7 +4730,10 @@
       const checkOut = document.getElementById('checkOutDate');
       const info = document.getElementById('stayDurationInfo');
       const text = document.getElementById('stayNightsText');
-      if (!checkIn || !checkOut || !info || !text) return;
+      const calcPanel = document.getElementById('priceCalcPanel');
+      const calcNights = document.getElementById('calcNights');
+      const calcTotal = document.getElementById('calcTotal');
+      if (!checkIn || !checkOut) return;
 
       if (checkIn.value) {
         checkOut.min = checkIn.value;
@@ -4048,14 +4748,81 @@
         const diffDays = Math.round((d2 - d1) / (1000 * 60 * 60 * 24));
         if (diffDays > 0) {
           const nightWord = diffDays === 1 ? 'night' : 'nights';
-          text.textContent = `Total: ${diffDays} ${nightWord}`;
-          info.style.display = 'inline-flex';
+          if (text) text.textContent = `Total: ${diffDays} ${nightWord}`;
+          if (info) info.style.display = 'inline-flex';
+          if (calcPanel && calcNights && calcTotal) {
+            calcNights.textContent = String(diffDays);
+            calcTotal.textContent = String(diffDays * 40);
+            calcPanel.classList.add('visible');
+          }
         } else {
-          info.style.display = 'none';
+          if (info) info.style.display = 'none';
+          if (calcPanel) calcPanel.classList.remove('visible');
         }
       } else {
-        info.style.display = 'none';
+        if (info) info.style.display = 'none';
+        if (calcPanel) calcPanel.classList.remove('visible');
       }
+    }
+
+    // Property Filter Bar (All / Pale Center / Jahorina)
+    (function initPropertyFilter() {
+      const filterPills = document.querySelectorAll('.property-filter-bar .filter-pill');
+      const cards = document.querySelectorAll('.residence-slide-card');
+      const comingSoonNotice = document.getElementById('jahorinaComingSoon');
+
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          const filter = pill.dataset.filter;
+          filterPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          cards.forEach(card => {
+            const loc = card.dataset.location || 'pale';
+            if (filter === 'all' || filter === loc) {
+              card.style.display = '';
+              if (typeof gsap !== 'undefined') {
+                gsap.fromTo(card, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35 });
+              }
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          if (comingSoonNotice) {
+            if (filter === 'jahorina') {
+              comingSoonNotice.style.display = 'block';
+              if (typeof gsap !== 'undefined') {
+                gsap.fromTo(comingSoonNotice, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35 });
+              }
+            } else {
+              comingSoonNotice.style.display = 'none';
+            }
+          }
+        });
+      });
+    })();
+
+    // Ski Discount Modal
+    function openSkiModal(e) {
+      if (e) e.preventDefault();
+      const modal = document.getElementById('skiDiscountModal');
+      if (modal) modal.classList.add('open');
+    }
+    function closeSkiModal() {
+      const modal = document.getElementById('skiDiscountModal');
+      if (modal) modal.classList.remove('open');
+    }
+    const skiCloseBtn = document.getElementById('skiModalClose');
+    if (skiCloseBtn) skiCloseBtn.addEventListener('click', closeSkiModal);
+    const skiModal = document.getElementById('skiDiscountModal');
+    if (skiModal) {
+      skiModal.addEventListener('click', (e) => {
+        if (e.target === skiModal) closeSkiModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && skiModal.classList.contains('open')) closeSkiModal();
+      });
     }
 
     (function initDateMin() {
