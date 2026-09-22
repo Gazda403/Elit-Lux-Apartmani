@@ -27,11 +27,11 @@ if (!process.env.RESEND_API_KEY) {
   }
 }
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const TO_EMAIL = process.env.TO_EMAIL || 'cicovicluka6@gmail.com';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'Lux Apartmani <onboarding@resend.dev>';
-
 module.exports = async function handler(req, res) {
+  const RESEND_API_KEY = process.env.RESEND_API_KEY;
+  const TO_EMAIL = process.env.TO_EMAIL || 'cicovicluka6@gmail.com';
+  const FROM_EMAIL = process.env.FROM_EMAIL || 'Lux Apartmani <onboarding@resend.dev>';
+
   // Setup CORS headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -50,6 +50,15 @@ module.exports = async function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     return res.end(JSON.stringify({ error: 'Method not allowed. Only POST is supported.' }));
+  }
+
+  if (!RESEND_API_KEY) {
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    return res.end(JSON.stringify({
+      error: 'RESEND_API_KEY is not configured.',
+      message: 'Please add RESEND_API_KEY in Vercel Dashboard -> Project Settings -> Environment Variables.'
+    }));
   }
 
   try {

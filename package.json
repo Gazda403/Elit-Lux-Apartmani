@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Lux Apartmani — Planinski Penthausi & Rezidencije",
   "scripts": {
+    "build": "echo 'Static build ready'",
     "dev": "node dev-server.js",
     "start": "node dev-server.js"
   },
