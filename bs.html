@@ -2873,36 +2873,31 @@
       transform: scale(0.95);
     }
 
-        /* =========================================================================
-       FLOATING VIBER FAB (Mobile Only)
+    /* =========================================================================
+       FLOATING VIBER FAB (Desktop & Mobile)
        ========================================================================= */
     .viber-fab {
       position: fixed;
       bottom: 24px;
-      right: 20px;
-      z-index: 9000;
-      display: none; /* hidden on desktop */
+      right: 24px;
+      z-index: 99999;
+      display: flex;
       flex-direction: column;
       align-items: flex-end;
       gap: 10px;
     }
-    @media (max-width: 768px) {
-      .viber-fab {
-        display: flex; /* only show on mobile */
-      }
-    }
     .viber-fab-btn {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 10px;
       background: #7360f2;
-      background: linear-gradient(135deg, #7c52f5 0%, #6330c9 100%);
-      color: #fff;
-      border: none;
+      background: linear-gradient(135deg, #7c52f5 0%, #59267c 100%);
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: 9999px;
-      padding: 13px 20px;
+      padding: 13px 22px;
       font-family: var(--font-sans);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       cursor: pointer;
@@ -2912,14 +2907,15 @@
       white-space: nowrap;
     }
     .viber-fab-btn:hover {
-      background: linear-gradient(135deg, #8b65f7 0%, #723fd8 100%);
+      background: linear-gradient(135deg, #8b65f7 0%, #68308f 100%);
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(115, 96, 242, 0.6);
+      box-shadow: 0 12px 32px rgba(115, 96, 242, 0.65);
+      color: #ffffff !important;
     }
     .viber-fab-btn svg {
-      width: 20px;
-      height: 20px;
-      fill: #fff;
+      width: 22px;
+      height: 22px;
+      fill: #ffffff;
       flex-shrink: 0;
     }
     .viber-fab-pulse {
@@ -2938,12 +2934,9 @@
       50% { transform: scale(1.6); opacity: 0.4; }
       100% { transform: scale(1); opacity: 1; }
     }
-      70%  { box-shadow: 0 0 0 8px rgba(255, 68, 68, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); }
-    }
     @media (max-width: 480px) {
       .viber-fab { bottom: 16px; right: 16px; }
-      .viber-fab-btn { padding: 12px 18px; font-size: 0.75rem; }
+      .viber-fab-btn { padding: 11px 16px; font-size: 0.75rem; }
     }
 
     /* =========================================================================
@@ -4141,6 +4134,24 @@
       Brzi upit na Viber
     </a>
   </div>
+
+  <!-- Ski Discount Modal -->
+  <div class="ski-modal-overlay" id="skiDiscountModal" role="dialog" aria-modal="true" aria-labelledby="skiModalTitle">
+    <div class="ski-modal-box">
+      <div class="ski-modal-header">
+        <div class="ski-modal-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="12" y1="7" x2="9" y2="4"/><line x1="12" y1="7" x2="15" y2="4"/><line x1="12" y1="17" x2="9" y2="20"/><line x1="12" y1="17" x2="15" y2="20"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="7" y1="12" x2="4" y2="9"/><line x1="7" y1="12" x2="4" y2="15"/><line x1="17" y1="12" x2="20" y2="9"/><line x1="17" y1="12" x2="20" y2="15"/></svg>
+          10% Popust
+        </div>
+        <h2 class="ski-modal-title" id="skiModalTitle">Popust na Ski Opremu<br>za Naše Goste</h2>
+        <button class="ski-modal-close" id="skiModalClose" aria-label="Zatvori">✕</button>
+      </div>
+      <div class="ski-modal-body">
+        <div class="ski-modal-steps">
+          <div class="ski-step">
+            <div class="ski-step-num">1</div>
+            <div class="ski-step-text">Rezervišite apartman putem <strong>online forme ispod</strong> ili kontaktirajte nas direktno.</div>
+          </div>
           <div class="ski-step">
             <div class="ski-step-num">2</div>
             <div class="ski-step-text">Primite <strong>potvrdu rezervacije</strong> na Vašu email adresu s kodom popusta.</div>
@@ -4174,9 +4185,9 @@
   </div>
 
     <!-- GSAP & Lenis Smooth Scroll CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
 
   <script>
     // 1. Lenis Smooth Scroll
