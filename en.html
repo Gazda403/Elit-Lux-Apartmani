@@ -2833,26 +2833,28 @@
     }
 
     /* =========================================================================
-       FLOATING VIBER FAB (Desktop & Mobile)
+       FLOATING VIBER FAB (Mobile Only)
        ========================================================================= */
     .viber-fab {
       position: fixed;
       bottom: 24px;
-      right: 24px;
+      right: 20px;
       z-index: 99999;
-      display: flex;
+      display: none;
       flex-direction: column;
       align-items: flex-end;
       gap: 10px;
+    }
+    @media (max-width: 768px) {
+      .viber-fab { display: flex; }
     }
     .viber-fab-btn {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: #7360f2;
       background: linear-gradient(135deg, #7c52f5 0%, #59267c 100%);
       color: #ffffff !important;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255,255,255,0.25);
       border-radius: 9999px;
       padding: 13px 22px;
       font-family: var(--font-sans);
@@ -2860,15 +2862,16 @@
       font-weight: 700;
       letter-spacing: 0.04em;
       cursor: pointer;
-      box-shadow: 0 8px 24px rgba(115, 96, 242, 0.45);
-      transition: all 0.3s var(--ease-out-expo);
+      box-shadow: 0 8px 24px rgba(115,96,242,0.45);
+      transition: all 0.3s ease;
       text-decoration: none;
       white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
     }
-    .viber-fab-btn:hover {
+    .viber-fab-btn:hover, .viber-fab-btn:active {
       background: linear-gradient(135deg, #8b65f7 0%, #68308f 100%);
       transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(115, 96, 242, 0.65);
+      box-shadow: 0 12px 32px rgba(115,96,242,0.65);
       color: #ffffff !important;
     }
     .viber-fab-btn svg {
@@ -2876,26 +2879,28 @@
       height: 22px;
       fill: #ffffff;
       flex-shrink: 0;
+      pointer-events: none;
     }
     .viber-fab-pulse {
       position: absolute;
-      top: -3px;
-      right: -3px;
+      top: -4px;
+      right: -4px;
       width: 12px;
       height: 12px;
       border-radius: 50%;
       background: #e0d4ff;
-      border: 2px solid var(--bg-cream, #f5f2eb);
+      border: 2px solid #1a1a2e;
       animation: viberFabPulse 2s infinite;
+      pointer-events: none;
     }
     @keyframes viberFabPulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.6); opacity: 0.4; }
-      100% { transform: scale(1); opacity: 1; }
+      0%   { transform: scale(1);   opacity: 1;   }
+      50%  { transform: scale(1.7); opacity: 0.4; }
+      100% { transform: scale(1);   opacity: 1;   }
     }
     @media (max-width: 480px) {
-      .viber-fab { bottom: 16px; right: 16px; }
-      .viber-fab-btn { padding: 11px 16px; font-size: 0.75rem; }
+      .viber-fab { bottom: 16px; right: 14px; }
+      .viber-fab-btn { padding: 11px 16px; font-size: 0.76rem; }
     }
 
     /* =========================================================================
@@ -4061,7 +4066,7 @@
 
     <!-- Floating Viber FAB (Mobile Only) -->
   <div class="viber-fab" id="viberFab">
-    <a href="viber://chat?number=%2B38765449068" id="viberFabBtn" class="viber-fab-btn" aria-label="Quick inquiry on Viber" style="position:relative;">
+    <a href="viber://contact?number=38765449068" id="viberFabBtn" class="viber-fab-btn" aria-label="Quick inquiry on Viber" style="position:relative;">
       <span class="viber-fab-pulse"></span>
       <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.39 3.01C17.28 1.93 14.85 1.5 12 1.5c-4.42 0-8 3.58-8 8 0 2.21.9 4.21 2.35 5.65L5 21l6.05-1.55c.31.03.63.05.95.05 4.42 0 8-3.58 8-8 0-3.32-2.02-6.17-5.06-7.39zm-1.84 13.06c-.25.26-.58.4-.95.4-.24 0-.48-.06-.7-.17-.18-.09-1.54-.73-2.97-2.01-1.12-1-1.74-2.1-1.88-2.35-.14-.24-.01-.38.1-.5.1-.11.23-.28.35-.42.12-.14.16-.23.24-.39.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.6-.42l-.51-.01c-.17 0-.45.06-.69.32-.24.26-.92.9-.92 2.2 0 1.3 1.01 2.56 1.15 2.75.14.19 1.99 3.04 4.82 4.26.67.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.68-.69 1.92-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.54-.33z"/></svg>
       Quick inquiry on Viber
@@ -5039,7 +5044,7 @@
       // Update Viber FAB link with selected apartment
       const fabBtn = document.getElementById('viberFabBtn');
       if (fabBtn) {
-        fabBtn.href = 'viber://chat?number=%2B38765449068';
+        fabBtn.href = 'viber://contact?number=38765449068';
       }
     }
 
