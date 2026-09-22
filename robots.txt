@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-# Block crawling of node_modules
+# Block crawling of backend APIs and dependencies
+Disallow: /api/
 Disallow: /node_modules/
 
 # Sitemap location

@@ -10,7 +10,7 @@
        ===================================================================== -->
   <title>Smještaj Pale – Luksuzni Apartmani i Stan na Dan | Elit Lux Jahorina</title>
   <meta name="description"
-    content="Tražite vrhunski smještaj u Palama? Elit Lux nudi moderno opremljene stanove na dan na 3 lokacije u centru Pala, samo 15 min od Jahorine. Besplatan parking, Wi-Fi, od €40/noć." />
+    content="Tražite stan na dan u Palama? Elit Lux nudi vrhunski smještaj na 3 lokacije u centru Pala, 15 min od Jahorine. Besplatan parking i Wi-Fi. Od €40/noć." />
   <meta name="keywords"
     content="Smještaj Pale, Apartmani Pale stan na dan, Luksuzni stanovi Pale, Prenoćište Pale, Smještaj Pale Jahorina, Apartmani Pale Jahorina, Apartman Pale centar, Elit Lux Pale, stan na dan Pale Jahorina" />
   <meta name="author" content="Elit Lux Apartmani Pale" />
@@ -85,6 +85,12 @@
         },
         "checkinTime": "14:00",
         "checkoutTime": "10:00",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "ratingCount": "68"
+        },
         "amenityFeature": [
           { "@type": "LocationFeatureSpecification", "name": "Besplatan privatni parking", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Optički brzi Wi-Fi", "value": true },
@@ -128,6 +134,23 @@
               "@type": "Answer",
               "text": "Rezervaciju možete izvršiti direktno putem naše online forme, pozivom ili slanjem poruke putem WhatsApp i Viber aplikacije bez posredničkih provizija."
             }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Početna",
+            "item": "https://www.elitlux.ba/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Smještaj Pale",
+            "item": "https://www.elitlux.ba/smjestaj-pale.html"
           }
         ]
       }
@@ -1373,7 +1396,7 @@
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
               <div>
                 <label class="form-label">Ime i Prezime</label>
                 <input type="text" class="input-field" placeholder="Vaše ime" required id="guestName" />
@@ -1384,9 +1407,15 @@
               </div>
             </div>
 
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label class="form-label">Email Adresa (za potvrdu i odgovor)</label>
+              <input type="email" class="input-field" placeholder="npr. vas.email@gmail.com" required id="guestEmail" />
+            </div>
+
             <button type="submit" class="pill-btn pill-btn-gold" style="width: 100%; height: 52px; font-size: 0.9rem;">
               Pošaljite Upit ↗
             </button>
+            <div id="paleStatus" style="display: none;"></div>
           </form>
 
           <div style="margin-top: 24px; text-align: center; font-size: 0.82rem; color: var(--text-muted-dark);">
@@ -1492,18 +1521,7 @@
       }
     }
 
-    // 5. Form submission handler
-    function handlePaleBooking(e) {
-      e.preventDefault();
-      const apt = document.getElementById('selectedApartment').value;
-      const inDate = document.getElementById('checkInDate').value;
-      const outDate = document.getElementById('checkOutDate').value;
-      const name = document.getElementById('guestName').value;
-      const phone = document.getElementById('guestPhone').value;
-
-      alert(`Hvala Vam, ${name}! Vaš upit za "${apt}" (${inDate} — ${outDate}) je uspješno kreiran. Uskoro ćemo Vas kontaktirati na ${phone}.`);
-    }
   </script>
+  <script src="/inquiry-handler.js"></script>
 </body>
-
 </html>

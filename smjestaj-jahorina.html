@@ -6,7 +6,7 @@
 
   <!-- SEO: TITLE & META DESCRIPTION (LOCAL SEO MAGNET — JAHORINA) -->
   <title>Apartmani Jahorina – Off-Mountain Luksuzni Smještaj | Elit Lux</title>
-  <meta name="description" content="Tražite ekskluzivan smještaj za Jahorinu? Elit Lux nudi luksuzne off-mountain apartmane i panoramske penthause u blizini staza (Pale). Kamin, wellness kupatila, ski depo i 10% popusta na rentu opreme." />
+  <meta name="description" content="Luksuzni off-mountain apartmani u blizini staza na Jahorini. Privatni parking, ski depo, moderno opremljeni penthausi i 10% ski popusta. Rezervišite od €40/noć." />
   <meta name="keywords" content="Apartmani Jahorina, Off-mountain smještaj Jahorina, Luksuzni penthouse Jahorina, Smještaj Jahorina, Zimovanje Jahorina apartmani, Jahorina staza smještaj, Jahorina stan na dan, Elit Lux Jahorina, apartman Jahorina Pale" />
   <meta name="author" content="Elit Lux Apartmani Jahorina" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -64,6 +64,12 @@
           "latitude": 43.7380,
           "longitude": 18.5660
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "ratingCount": "72"
+        },
         "amenityFeature": [
           { "@type": "LocationFeatureSpecification", "name": "Off-Mountain Lokacija (15 min do staza)", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Grijani Ski Depo & Grijači Pancerica", "value": true },
@@ -88,8 +94,33 @@
             "name": "Ima li smještaj osiguran prostor za ski opremu i popust na ski rentu?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Da, svi gosti ostvaruju garantovani popust od 10% na iznajmljivanje kompletne ski i snowboard opreme, uz osiguran prostor za skladištenje."
+              "text": "Svi gosti Elit Lux-a ostvaruju garantovani popust od 10% na iznajmljivanje kompletne ski i snowboard opreme kod naših partnerskih ski depoa na Jahorini i u Palama."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Mogu li rezervisati povoljniji smještaj u Palama, a skijati na Jahorini?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Svakako! Preporučujemo naše luksuzne apartmane u Palama (15 minuta vožnje do Jahorine) koji nude veći komfor, privatni parking i mir bez planinske gužve. Pogledajte stranicu Smještaj Pale."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Početna",
+            "item": "https://www.elitlux.ba/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Smještaj Jahorina",
+            "item": "https://www.elitlux.ba/smjestaj-jahorina.html"
           }
         ]
       }
@@ -1509,7 +1540,7 @@
               </div>
             </div>
 
-            <div class="form-two-col">
+            <div class="form-two-col" style="margin-bottom: 16px;">
               <div>
                 <label class="form-label">Ime i Prezime</label>
                 <input type="text" class="input-field" placeholder="Vaše ime" required id="guestName" />
@@ -1520,9 +1551,15 @@
               </div>
             </div>
 
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label class="form-label">Email Adresa (za potvrdu i odgovor)</label>
+              <input type="email" class="input-field" placeholder="npr. vas.email@gmail.com" required id="guestEmail" />
+            </div>
+
             <button type="submit" class="pill-btn pill-btn-gold" style="width: 100%; height: 50px; font-size: 0.9rem;">
               Pošaljite Upit ↗
             </button>
+            <div id="jahorinaStatus" style="display: none;"></div>
           </form>
 
           <div style="margin-top: 20px; text-align: center; font-size: 0.82rem; color: var(--text-muted-dark);">
@@ -1642,17 +1679,7 @@
       }
     }
 
-    // 6. Form submission handler
-    function handleJahorinaBooking(e) {
-      e.preventDefault();
-      const apt = document.getElementById('selectedPenthouse').value;
-      const inDate = document.getElementById('checkInDate').value;
-      const outDate = document.getElementById('checkOutDate').value;
-      const name = document.getElementById('guestName').value;
-      const phone = document.getElementById('guestPhone').value;
-
-      alert(`Hvala Vam, ${name}! Vaš upit za "${apt}" (${inDate} — ${outDate}) na Jahorini je uspješno poslat. Uskoro ćemo Vas kontaktirati na ${phone}.`);
-    }
   </script>
+  <script src="/inquiry-handler.js"></script>
 </body>
 </html>

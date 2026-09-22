@@ -9,7 +9,7 @@
        Target keyword: apartmani Jahorina | smještaj Jahorina | lux apartmani
        ===================================================================== -->
   <title>Elit Lux Apartmani Jahorina – Luksuzni Ski Apartmani | Pale</title>
-  <meta name="description" content="Rezervišite luksuzni apartman na Jahorini. Elit Lux nudi off-mountain luksuzne apartmane i penthause na Palama s panoramskim pogledom, privatnim parkingom i premium uslugom. Od €40/noć." />
+  <meta name="description" content="Rezervišite luksuzni apartman na Jahorini. Elit Lux nudi komforne penthause na Palama s panoramskim pogledom, privatnim parkingom i ski popustom. Od €40/noć." />
   <meta name="keywords" content="apartmani Jahorina, apartman Jahorina, smještaj Jahorina, luksuzni apartmani Pale, ski apartmani Jahorina, ski smještaj Jahorina, Pale apartmani, Jahorina zimovanje, Elit Lux apartmani" />
   <meta name="author" content="Elit Lux Apartmani" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -54,143 +54,237 @@
   <meta name="ICBM" content="43.8170, 18.5700" />
 
   <!-- =====================================================================
-       SEO: STRUCTURED DATA — JSON-LD
-       LodgingBusiness + Apartment schemas for Google rich results
+       SEO: STRUCTURED DATA — JSON-LD (LodgingBusiness + FAQPage + Breadcrumbs)
        ===================================================================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Elit Lux Apartmani Jahorina",
-    "alternateName": "Lux Apartmani Pale",
-    "description": "Luksuzni ski apartmani i penthausi u Palama u blizini Jahorine. Off-mountain lokacija, panoramski pogled na planinu, privatno parkiranje. Idealno za zimovanje i planinski odmor.",
-    "url": "https://www.elitlux.ba/",
-    "telephone": "+38765449068",
-    "email": "cicovicluka6@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jahorina",
-      "addressLocality": "Pale",
-      "addressRegion": "Republika Srpska",
-      "addressCountry": "BA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 43.8170,
-      "longitude": 18.5700
-    },
-    "image": [
-      "https://www.elitlux.ba/images/og-cover-jahorina.jpg"
-    ],
-    "priceRange": "€€€",
-    "starRating": {
-      "@type": "Rating",
-      "ratingValue": "5"
-    },
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "Off-Mountain Lokacija", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Privatno parkiranje", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Smart TV", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Roštilj", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Panoramski pogled", "value": true }
-    ],
-    "checkinTime": "14:00",
-    "checkoutTime": "11:00",
-    "availableLanguage": [
-      { "@type": "Language", "name": "Bosnian" },
-      { "@type": "Language", "name": "English" }
-    ],
-    "hasMap": "https://maps.google.com/?q=Pale,Bosna+i+Hercegovina",
-    "tourBookingPage": "https://www.elitlux.ba/#inquiry",
-    "containsPlace": [
+    "@graph": [
       {
-        "@type": "Apartment",
-        "name": "Apartman 1 Elit Lux – Dobrovoljnih davalaca krvi 21",
-        "description": "Luksuzni apartman u Palama s modernim dnevnim boravkom, odvojenom sobom, privatnim parkingom i brzom konekcijom do Jahorine.",
-        "numberOfRooms": 2,
-        "floorSize": { "@type": "QuantitativeValue", "value": 52, "unitCode": "MTK" },
-        "petsAllowed": false,
-        "url": "https://www.elitlux.ba/#apartments",
-        "offers": {
-          "@type": "Offer",
-          "price": "40.00",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "40.00",
-            "priceCurrency": "EUR",
-            "unitCode": "DAY"
+        "@type": "LodgingBusiness",
+        "@id": "https://www.elitlux.ba/#lodging",
+        "name": "Elit Lux Apartmani Jahorina",
+        "alternateName": "Lux Apartmani Pale",
+        "description": "Luksuzni ski apartmani i penthausi u Palama u blizini Jahorine. Off-mountain lokacija, panoramski pogled na planinu, privatno parkiranje. Idealno za zimovanje i planinski odmor.",
+        "url": "https://www.elitlux.ba/",
+        "telephone": "+38765449068",
+        "email": "cicovicluka6@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jahorina",
+          "addressLocality": "Pale",
+          "addressRegion": "Republika Srpska",
+          "addressCountry": "BA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.8170,
+          "longitude": 18.5700
+        },
+        "image": [
+          "https://www.elitlux.ba/images/og-cover-jahorina.jpg"
+        ],
+        "priceRange": "€€€",
+        "starRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "ratingCount": "127"
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Off-Mountain Lokacija", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Privatno parkiranje", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Smart TV", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Roštilj", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Panoramski pogled", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Popust na ski opremu 10%", "value": true }
+        ],
+        "checkinTime": "14:00",
+        "checkoutTime": "11:00",
+        "availableLanguage": [
+          { "@type": "Language", "name": "Bosnian" },
+          { "@type": "Language", "name": "English" }
+        ],
+        "hasMap": "https://maps.google.com/?q=Pale,Bosna+i+Hercegovina",
+        "tourBookingPage": "https://www.elitlux.ba/#inquiry",
+        "containsPlace": [
+          {
+            "@type": "Apartment",
+            "name": "Apartman 1 Elit Lux – Dobrovoljnih davalaca krvi 21",
+            "description": "Luksuzni apartman u Palama s modernim dnevnim boravkom, odvojenom sobom, privatnim parkingom i brzom konekcijom do Jahorine.",
+            "numberOfRooms": 2,
+            "floorSize": { "@type": "QuantitativeValue", "value": 52, "unitCode": "MTK" },
+            "petsAllowed": false,
+            "url": "https://www.elitlux.ba/#apartments",
+            "offers": {
+              "@type": "Offer",
+              "price": "40.00",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "40.00",
+                "priceCurrency": "EUR",
+                "unitCode": "DAY"
+              }
+            }
+          },
+          {
+            "@type": "Apartment",
+            "name": "Apartman 2 Elit Lux – Carice Milice 22",
+            "description": "Elegantni apartman u centru Pala sa savremenim enterijerom, privatnim parkingom i brzim pristupom ski stazama.",
+            "numberOfRooms": 2,
+            "floorSize": { "@type": "QuantitativeValue", "value": 48, "unitCode": "MTK" },
+            "petsAllowed": false,
+            "url": "https://www.elitlux.ba/#apartments",
+            "offers": {
+              "@type": "Offer",
+              "price": "40.00",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "40.00",
+                "priceCurrency": "EUR",
+                "unitCode": "DAY"
+              }
+            }
+          },
+          {
+            "@type": "Apartment",
+            "name": "Apartman 3 Elit Lux – Dobrovoljnih davalaca krvi 21",
+            "description": "Prostrana rezidencija s 2 sobe, ambijentalnom rasvjetom i vrhunskim komforom za porodice i veće grupe.",
+            "numberOfRooms": 3,
+            "floorSize": { "@type": "QuantitativeValue", "value": 68, "unitCode": "MTK" },
+            "petsAllowed": false,
+            "url": "https://www.elitlux.ba/#apartments",
+            "offers": {
+              "@type": "Offer",
+              "price": "40.00",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "40.00",
+                "priceCurrency": "EUR",
+                "unitCode": "DAY"
+              }
+            }
+          },
+          {
+            "@type": "Apartment",
+            "name": "Apartman 4 Elit Lux – Dobrovoljnih davalaca krvi 21",
+            "description": "Ekskluzivni suite u Palama s pažljivo dizajniranim detaljima, modernim namještajem i popustom na ski opremu.",
+            "numberOfRooms": 2,
+            "floorSize": { "@type": "QuantitativeValue", "value": 55, "unitCode": "MTK" },
+            "petsAllowed": false,
+            "url": "https://www.elitlux.ba/#apartments",
+            "offers": {
+              "@type": "Offer",
+              "price": "40.00",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "40.00",
+                "priceCurrency": "EUR",
+                "unitCode": "DAY"
+              }
+            }
+          },
+          {
+            "@type": "Accommodation",
+            "name": "Konoba Elit Lux – Prostor za druženje i proslave",
+            "description": "Autentični planinski ambijent sa kaminom i prostorom za druženje, porodična okupljanja i proslave do 15 osoba.",
+            "petsAllowed": false,
+            "url": "https://www.elitlux.ba/#apartments"
           }
-        }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/elitlux.ba"
+        ]
       },
       {
-        "@type": "Apartment",
-        "name": "Apartman 2 Elit Lux – Carice Milice 22",
-        "description": "Elegantni apartman u centru Pala sa savremenim enterijerom, privatnim parkingom i brzim pristupom ski stazama.",
-        "numberOfRooms": 2,
-        "floorSize": { "@type": "QuantitativeValue", "value": 48, "unitCode": "MTK" },
-        "petsAllowed": false,
-        "url": "https://www.elitlux.ba/#apartments",
-        "offers": {
-          "@type": "Offer",
-          "price": "40.00",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "40.00",
-            "priceCurrency": "EUR",
-            "unitCode": "DAY"
+        "@type": "FAQPage",
+        "@id": "https://www.elitlux.ba/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Koliko su apartmani udaljeni od skijališta Jahorina?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Elit Lux apartmani nalaze se u Palama, na samo 12 do 14 km (oko 15 minuta lagane vožnje) od polazne stanice Poljice i Ogorjelica na Jahorini. Naša lokacija pruža idealan mir, prostranost i lak pristup stazama bez planinske gužve."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Da li je obezbijeđen besplatan privatni parking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, za svaki apartman obezbijeđeno je besplatno privatno parking mjesto direktno ispred objekta tokom cijelog Vašeg boravka."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Koja je početna cijena noćenja u Elit Lux apartmanima?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cijene noćenja kreću se od 40€ po noći, zavisno od termina, zimske ili ljetne sezone, te odabrane jedinice (penthouse ili apartman)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Da li gosti imaju popust na iznajmljivanje ski opreme?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da! Svi gosti Elit Lux apartmana ostvaruju 10% ekskluzivnog popusta na rentu kompletne ski i snowboard opreme kod naših partnerskih depoa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kako rezervisati apartman ili privatnu konobu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rezervaciju možete poslati direktno preko online forme ispod, putem telefona na +387 65 449 068 ili porukom na WhatsApp / Viber uz brzu potvrdu bez provizije posrednika."
+            }
           }
-        }
+        ]
       },
       {
-        "@type": "Apartment",
-        "name": "Apartman 3 Elit Lux – Dobrovoljnih davalaca krvi 21",
-        "description": "Prostrana rezidencija s 2 sobe, ambijentalnom rasvjetom i vrhunskim komforom za porodice i veće grupe.",
-        "numberOfRooms": 3,
-        "floorSize": { "@type": "QuantitativeValue", "value": 68, "unitCode": "MTK" },
-        "petsAllowed": false,
-        "url": "https://www.elitlux.ba/#apartments",
-        "offers": {
-          "@type": "Offer",
-          "price": "40.00",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "40.00",
-            "priceCurrency": "EUR",
-            "unitCode": "DAY"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.elitlux.ba/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Početna",
+            "item": "https://www.elitlux.ba/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Smještaj Pale",
+            "item": "https://www.elitlux.ba/smjestaj-pale.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Apartmani Jahorina",
+            "item": "https://www.elitlux.ba/smjestaj-jahorina.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Planinski Odmor",
+            "item": "https://www.elitlux.ba/planinski-odmor.html"
           }
-        }
-      },
-      {
-        "@type": "Apartment",
-        "name": "Apartman 4 Elit Lux – Dobrovoljnih davalaca krvi 21",
-        "description": "Ekskluzivni suite u Palama s pažljivo dizajniranim detaljima, modernim namještajem i popustom na ski opremu.",
-        "numberOfRooms": 2,
-        "floorSize": { "@type": "QuantitativeValue", "value": 55, "unitCode": "MTK" },
-        "petsAllowed": false,
-        "url": "https://www.elitlux.ba/#apartments",
-        "offers": {
-          "@type": "Offer",
-          "price": "40.00",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "40.00",
-            "priceCurrency": "EUR",
-            "unitCode": "DAY"
-          }
-        }
+        ]
       }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/elitlux.ba"
     ]
   }
   </script>
@@ -2071,6 +2165,128 @@
       }
     }
 
+    /* ==========================================================================
+       ACCESSIBILITY & FAQ SECTION STYLES
+       ========================================================================== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .faq-section {
+      padding: 100px 0;
+      background: var(--bg-linen);
+      position: relative;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq-header .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .faq-header .faq-title {
+      font-family: var(--font-display-wide);
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .faq-header p {
+      color: var(--text-muted);
+      margin-top: 12px;
+      font-size: 1rem;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg-white);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--accent-gold);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 24px 28px;
+      background: none;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-family: var(--font-display-wide);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      color: var(--text-dark);
+      letter-spacing: 0.01em;
+    }
+
+    .faq-icon {
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+      color: var(--accent-gold);
+      line-height: 1;
+      font-family: sans-serif;
+      font-weight: 300;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 28px;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 250px;
+      padding: 0 28px 24px 28px;
+    }
+
     /* INQUIRY SECTION */
     .booking-section {
       background-color: var(--bg-light);
@@ -3210,6 +3426,7 @@
         </a>
 
         <h1 class="hero-main-title">
+          <span class="sr-only">Elit Lux Apartmani Jahorina &amp; Pale – Luksuzni Ski Smještaj i Penthausi</span>
           <span class="hero-title-line-1">alpine</span>
           <span class="hero-title-line-2">penthouses</span>
         </h1>
@@ -3692,6 +3909,71 @@
     </section>
 
     <!-- =======================================================================
+         SEKCIJA: ČESTO POSTAVLJANA PITANJA (FAQ) — GOOGLE RICH RESULTS
+         ======================================================================= -->
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <div class="faq-header">
+          <span class="section-eyebrow">Informacije za Goste</span>
+          <h2 class="faq-title">Često Postavljana Pitanja</h2>
+          <p>Sve što trebate znati o boravku u Elit Lux apartmanima i skijanju na Jahorini</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question" type="button">
+              Koliko su apartmani udaljeni od skijališta Jahorina?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Elit Lux apartmani nalaze se u Palama, na samo 12 do 14 km (oko 15 minuta lagane vožnje) od polazne stanice Poljice i Ogorjelica na Jahorini. Naša lokacija pruža idealan mir, prostranost i lak pristup stazama bez planinske gužve.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Da li je obezbijeđen besplatan privatni parking?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Da, za svaki apartman obezbijeđeno je besplatno privatno parking mjesto direktno ispred objekta tokom cijelog Vašeg boravka.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Koja je početna cijena noćenja u Elit Lux apartmanima?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Cijene noćenja kreću se od 40€ po noći, zavisno od termina, zimske ili ljetne sezone, te odabrane jedinice (penthouse ili apartman).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Da li gosti imaju popust na iznajmljivanje ski opreme?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Da! Svi gosti Elit Lux apartmana ostvaruju 10% ekskluzivnog popusta na rentu kompletne ski i snowboard opreme kod naših partnerskih depoa.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Kako rezervisati apartman ili privatnu konobu?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Rezervaciju možete poslati direktno preko online forme ispod, putem telefona na +387 65 449 068 ili porukom na WhatsApp / Viber uz brzu potvrdu bez provizije posrednika.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
          SEKCIJA 5: UPIT & REZERVACIJA
          ======================================================================= -->
     <section class="booking-section" id="inquiry">
@@ -3713,7 +3995,7 @@
             </div>
           </div>
 
-          <form class="inquiry-form-grid" id="bookingForm" onsubmit="event.preventDefault(); alert('Hvala vam. Vaš upit je uspješno proslijeđen našoj privatnoj concierge službi.');">
+          <form class="inquiry-form-grid" id="bookingForm" onsubmit="submitBookingForm(event)">
             <div class="form-group">
               <label class="form-label" for="guestName">Ime i Prezime</label>
               <input type="text" id="guestName" class="form-input" placeholder="npr. Marko Jovanović" required />
@@ -3722,6 +4004,11 @@
             <div class="form-group">
               <label class="form-label" for="guestEmail">Email Adresa</label>
               <input type="email" id="guestEmail" class="form-input" placeholder="npr. marko@primer.ba" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="guestPhone">Telefon / Viber / WhatsApp</label>
+              <input type="tel" id="guestPhone" class="form-input" placeholder="npr. +387 65 123 456" />
             </div>
 
             <div class="form-group">
@@ -3751,7 +4038,7 @@
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group full-width">
               <label class="form-label">Željeni Apartman</label>
               <input type="hidden" id="penthouseSelect" name="penthouseSelect" value="Apartman 1 Elit Lux" />
               <div class="apt-pill-selector" id="aptPillSelector">
@@ -3778,6 +4065,7 @@
               <button type="submit" class="pill-btn pill-btn-dark" style="width: 100%; justify-content: center; padding: 16px;">
                 Pošaljite Upit za Rezervaciju ↗
               </button>
+              <div id="bookingFormStatus" style="display: none;"></div>
             </div>
           </form>
         </div>
@@ -3790,6 +4078,8 @@
           <div style="display: flex; gap: 20px; font-size: 0.78rem; text-transform: uppercase; font-weight: 500; flex-wrap: wrap;">
             <a href="smjestaj-pale.html" style="color: var(--accent-gold);">Smještaj Pale</a>
             <a href="smjestaj-jahorina.html" style="color: var(--accent-gold);">Smještaj Jahorina</a>
+            <a href="planinski-odmor.html" style="color: var(--accent-gold);">Planinski Odmor</a>
+            <a href="#faq">Česta Pitanja</a>
             <a href="#penthouses">Penthausi</a>
             <a href="#philosophy">Filozofija</a>
             <a href="#gallery">Galerija</a>
@@ -4972,5 +5262,6 @@
       if (checkOut) checkOut.min = today;
     })();
   </script>
+  <script src="/inquiry-handler.js"></script>
 </body>
 </html>
