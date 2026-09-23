@@ -5,91 +5,91 @@
 
   <!-- 1. Homepage (Bosnian / Serbian - Primary) -->
   <url>
-    <loc>https://www.elitlux.ba/</loc>
-    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitlux.ba/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.elitlux.ba/en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitlux.ba/en.html" />
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://www.elitluxapartmani.com/</loc>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitluxapartmani.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.elitluxapartmani.com/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitluxapartmani.com/en.html" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.elitlux.ba/images/og-cover-jahorina.jpg</image:loc>
+      <image:loc>https://www.elitluxapartmani.com/images/og-cover-jahorina.jpg</image:loc>
       <image:title>Elit Lux Apartmani Jahorina i Pale - Luksuzni Planinski Smještaj</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.elitlux.ba/images/Living_room_interior_design_20260918111930.jpeg</image:loc>
+      <image:loc>https://www.elitluxapartmani.com/images/Living_room_interior_design_20260918111930.jpeg</image:loc>
       <image:title>Apartman 1 Elit Lux Dnevni Boravak</image:title>
     </image:image>
   </url>
 
   <!-- 2. Bosnian Version (bs.html) -->
   <url>
-    <loc>https://www.elitlux.ba/bs.html</loc>
-    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitlux.ba/bs.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.elitlux.ba/en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitlux.ba/en.html" />
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://www.elitluxapartmani.com/bs.html</loc>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitluxapartmani.com/bs.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.elitluxapartmani.com/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitluxapartmani.com/en.html" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.elitlux.ba/images/ddk21/2/626424316.jpg</image:loc>
+      <image:loc>https://www.elitluxapartmani.com/images/ddk21/2/626424316.jpg</image:loc>
       <image:title>Apartman 2 Elit Lux Enterijer</image:title>
     </image:image>
   </url>
 
   <!-- 3. Dedicated Landing Page: Smještaj Pale (High Search Volume) -->
   <url>
-    <loc>https://www.elitlux.ba/smjestaj-pale.html</loc>
-    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitlux.ba/smjestaj-pale.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitlux.ba/smjestaj-pale.html" />
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://www.elitluxapartmani.com/smjestaj-pale.html</loc>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitluxapartmani.com/smjestaj-pale.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitluxapartmani.com/smjestaj-pale.html" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://www.elitlux.ba/images/ddk21/2/626424342.jpg</image:loc>
+      <image:loc>https://www.elitluxapartmani.com/images/ddk21/2/626424342.jpg</image:loc>
       <image:title>Smještaj Pale - Elit Lux Apartmani i Stan na Dan</image:title>
     </image:image>
   </url>
 
   <!-- 4. Dedicated Landing Page: Smještaj Jahorina (Ski & Winter Season) -->
   <url>
-    <loc>https://www.elitlux.ba/smjestaj-jahorina.html</loc>
-    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitlux.ba/smjestaj-jahorina.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitlux.ba/smjestaj-jahorina.html" />
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://www.elitluxapartmani.com/smjestaj-jahorina.html</loc>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitluxapartmani.com/smjestaj-jahorina.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitluxapartmani.com/smjestaj-jahorina.html" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://www.elitlux.ba/images/ddk21/2/dd2222.jpg</image:loc>
+      <image:loc>https://www.elitluxapartmani.com/images/ddk21/2/dd2222.jpg</image:loc>
       <image:title>Apartmani Jahorina - Luksuzni Ski Smještaj i Penthausi</image:title>
     </image:image>
   </url>
 
   <!-- 5. Content Guide: Planinski Odmor & Priroda -->
   <url>
-    <loc>https://www.elitlux.ba/planinski-odmor.html</loc>
-    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitlux.ba/planinski-odmor.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitlux.ba/planinski-odmor.html" />
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://www.elitluxapartmani.com/planinski-odmor.html</loc>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitluxapartmani.com/planinski-odmor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitluxapartmani.com/planinski-odmor.html" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://www.elitlux.ba/images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg</image:loc>
+      <image:loc>https://www.elitluxapartmani.com/images/konoba/IMG-7a52c4450fe4025f95d31b5c9331f81f-V.jpg</image:loc>
       <image:title>Planinski Odmor Pale i Jahorina - Konoba i Priroda</image:title>
     </image:image>
   </url>
 
   <!-- 6. English Version (International Guests & Travelers) -->
   <url>
-    <loc>https://www.elitlux.ba/en.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.elitlux.ba/en.html" />
-    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitlux.ba/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitlux.ba/en.html" />
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://www.elitluxapartmani.com/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.elitluxapartmani.com/en.html" />
+    <xhtml:link rel="alternate" hreflang="bs" href="https://www.elitluxapartmani.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elitluxapartmani.com/en.html" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.elitlux.ba/images/og-cover-jahorina.jpg</image:loc>
+      <image:loc>https://www.elitluxapartmani.com/images/og-cover-jahorina.jpg</image:loc>
       <image:title>Elit Lux Luxury Apartments Jahorina and Pale</image:title>
     </image:image>
   </url>

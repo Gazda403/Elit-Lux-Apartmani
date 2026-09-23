@@ -6,4 +6,4 @@ Disallow: /api/
 Disallow: /node_modules/
 
 # Sitemap location
-Sitemap: https://www.elitlux.ba/sitemap.xml
+Sitemap: https://www.elitluxapartmani.com/sitemap.xml
